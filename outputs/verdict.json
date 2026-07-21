@@ -1,0 +1,75 @@
+{
+  "c1_thm1_monotone": {
+    "passed": true,
+    "violations": 0,
+    "tested": 20
+  },
+  "c4_ir": {
+    "passed": true,
+    "max_overpay": -0.010980851013860038
+  },
+  "c2_thm2_l2_O1": {
+    "passed": true,
+    "ratio": 2.986279505202738,
+    "per_m": {
+      "80": {
+        "total": 1.046417236328125,
+        "payers": 4
+      },
+      "240": {
+        "total": 0.994232177734375,
+        "payers": 4
+      },
+      "560": {
+        "total": 2.96905517578125,
+        "payers": 5
+      }
+    }
+  },
+  "c3_thm3_knn_Omegam": {
+    "passed": true,
+    "growth_ratio": 6.560837716926405,
+    "per_m": {
+      "80": {
+        "total": 0.620758056640625,
+        "payers": 5
+      },
+      "240": {
+        "total": 4.011199951171875,
+        "payers": 9
+      },
+      "560": {
+        "total": 4.07269287109375,
+        "payers": 15
+      }
+    }
+  },
+  "c5_experiments": {
+    "passed": true,
+    "plateau": true,
+    "corr": true,
+    "accuracy_payment": [
+      {
+        "noise": 0.15,
+        "acc": 0.9875,
+        "frac": 0.00262418917389421
+      },
+      {
+        "noise": 0.3,
+        "acc": 0.9875,
+        "frac": 0.00262418917389421
+      },
+      {
+        "noise": 0.6,
+        "acc": 0.975,
+        "frac": 0.026555139127778352
+      }
+    ]
+  },
+  "c6_welfare": {
+    "passed": true,
+    "welfare_bids": 100.8047954488217,
+    "welfare_unif": 100.04806526136889,
+    "improvement_pct": 0.7563666378514123
+  }
+}
