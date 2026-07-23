@@ -1,0 +1,7 @@
+{
+  "line_collections": 6545,
+  "optimal_pair_comparisons": 206325,
+  "passed": true,
+  "route": "independent_lower_envelope_all_tie_choices",
+  "violations": []
+}

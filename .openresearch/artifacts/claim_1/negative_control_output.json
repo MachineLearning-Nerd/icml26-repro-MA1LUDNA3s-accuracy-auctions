@@ -1,0 +1,10 @@
+{
+  "control": "reverse_loss_accuracy_threshold",
+  "control_failed_as_intended": true,
+  "expected_to_fail_monotonicity": true,
+  "first_witness": {
+    "loss0": 3,
+    "loss1": 0
+  },
+  "witness_count": 12
+}

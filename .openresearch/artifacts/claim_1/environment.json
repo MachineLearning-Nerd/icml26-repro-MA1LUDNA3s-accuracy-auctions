@@ -1,0 +1,17 @@
+{
+  "command": "uv run --frozen python repro/src/verify_auctions.py",
+  "deterministic_seeds": [],
+  "elapsed_seconds": 0.20892691699555144,
+  "git_sha": "ece2eb14505a7204baae254ae90e731ce0ab43c5",
+  "logical_cpu_count": 8,
+  "machine": "arm64",
+  "packages": {
+    "folktables": "0.0.12",
+    "numpy": "2.2.6",
+    "pandas": "2.3.1",
+    "scikit-learn": "1.7.1",
+    "scipy": "1.16.0"
+  },
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "python": "3.12.11"
+}
