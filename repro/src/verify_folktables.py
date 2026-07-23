@@ -62,20 +62,13 @@ OFFICIAL_FEATURES = (
     "SEX",
     "RAC1P",
 )
-CATEGORICAL_PAPER_FEATURES = (
-    "COW",
-    "SCHL",
-    "MAR",
-    "OCCP",
-    "RELP",
-    "SEX",
-    "RAC1P",
-    "DIS",
-    "ESR",
-    "HISP",
-    "MIG",
+ORDINAL_FEATURES = ("SCHL", "AGEP", "WKHP")
+DEMOGRAPHIC_FEATURES = ("MAR", "RELP", "SEX", "RAC1P", "DIS", "HISP", "MIG")
+ROUTES = (
+    "paper_mapped_noisy",
+    "paper_mapped_clean",
+    "paper_demographic_noisy",
 )
-ROUTES = ("paper13_noisy", "paper13_clean", "official10_clean")
 TRIALS = tuple(range(5))
 ALPHAS = tuple(float(value) for value in np.linspace(0.0, 1.0, 20))
 V_PLUS_VALUES = (4, 6, 8, 10, 12)
@@ -141,20 +134,83 @@ def route_features(
     route: str,
     trial: int,
 ) -> np.ndarray:
-    if route.startswith("paper13"):
-        columns = PAPER_FEATURES
-    elif route == "official10_clean":
-        columns = OFFICIAL_FEATURES
-    else:
+    if route not in ROUTES:
         raise ValueError(route)
-    features = data.loc[:, list(columns)].to_numpy(dtype=np.float64, copy=True)
-    features = np.nan_to_num(features, nan=-1.0, posinf=-1.0, neginf=-1.0)
-    if route == "paper13_noisy":
+    columns: list[np.ndarray] = [
+        np.nan_to_num(data[name].to_numpy(dtype=np.float64), nan=-1.0)
+        for name in ORDINAL_FEATURES
+    ]
+    mapped = route.startswith("paper_mapped")
+    if mapped:
+        columns.extend(
+            [
+                np.isin(data["COW"].to_numpy(), (1, 2, 3, 4, 5)).astype(float),
+                (data["MAR"].to_numpy() == 1).astype(float),
+                np.isin(data["RELP"].to_numpy(), (0, 1, 13)).astype(float),
+                (data["SEX"].to_numpy() == 1).astype(float),
+                (data["RAC1P"].to_numpy() == 1).astype(float),
+                (data["DIS"].to_numpy() == 1).astype(float),
+                np.isin(data["ESR"].to_numpy(), (1, 2, 4, 5)).astype(float),
+                (data["HISP"].to_numpy() > 1).astype(float),
+                (data["MIG"].to_numpy() != 1).astype(float),
+            ]
+        )
+    else:
+        columns.extend(
+            [
+                np.nan_to_num(data[name].to_numpy(dtype=np.float64), nan=-1.0)
+                for name in ("COW", "ESR")
+            ]
+        )
+        columns.extend(
+            [
+                (data["MAR"].to_numpy() == 1).astype(float),
+                np.isin(data["RELP"].to_numpy(), (0, 1, 13)).astype(float),
+                (data["SEX"].to_numpy() == 1).astype(float),
+                (data["RAC1P"].to_numpy() == 1).astype(float),
+                (data["DIS"].to_numpy() == 1).astype(float),
+                (data["HISP"].to_numpy() > 1).astype(float),
+                (data["MIG"].to_numpy() != 1).astype(float),
+            ]
+        )
+    occupation = np.nan_to_num(
+        data["OCCP"].to_numpy(dtype=np.float64), nan=9999.0
+    )
+    occupation_edges = np.array(
+        [
+            0,
+            1600,
+            2100,
+            3000,
+            3700,
+            4200,
+            4300,
+            4700,
+            5000,
+            6000,
+            6200,
+            7000,
+            7700,
+            9000,
+            10_000,
+        ],
+        dtype=np.float64,
+    )
+    occupation_group = np.clip(
+        np.digitize(occupation, occupation_edges[1:-1], right=False),
+        0,
+        13,
+    )
+    occupation_one_hot = np.eye(14, dtype=np.float64)[occupation_group]
+    columns.extend(occupation_one_hot[:, index] for index in range(14))
+    features = np.column_stack(columns)
+    if route.endswith("_noisy"):
         rng = np.random.default_rng(460_800 + trial)
-        column_lookup = {name: index for index, name in enumerate(columns)}
-        indices = [column_lookup[name] for name in CATEGORICAL_PAPER_FEATURES]
-        features[:, indices] += rng.normal(
-            0.0, 0.4, size=(len(features), len(indices))
+        categorical_start = len(ORDINAL_FEATURES)
+        features[:, categorical_start:] += rng.normal(
+            0.0,
+            0.4,
+            size=(len(features), features.shape[1] - categorical_start),
         )
     return features
 
@@ -375,7 +431,7 @@ def negative_control(
     labels: np.ndarray,
 ) -> dict[str, Any]:
     train_indices, validation_indices = split_indices(labels, 0)
-    features = route_features(data, "paper13_noisy", 0)
+    features = route_features(data, "paper_mapped_noisy", 0)
     x_train, x_validation = standardize(
         features, train_indices, validation_indices
     )
@@ -432,7 +488,7 @@ def main() -> int:
     primary = next(
         item
         for item in summary["routes"]
-        if item["route"] == "paper13_noisy"
+        if item["route"] == "paper_mapped_noisy"
     )
     best = primary["best"]
     welfare_matches = 20.0 <= best["welfare_gain_percent_mean"] <= 26.0
@@ -459,9 +515,48 @@ def main() -> int:
         {
             "claim_id": 6,
             "paper_anchor": "S7.F3",
+            "route_id": "paper_mapped_preprocessing",
             "statement": "On NJ ACSIncome with label-based values v(0)=1 and v(1)=v_plus, optimizing welfare produces an endpoint with about +23% normalized welfare and -21% accuracy relative to the alpha=0 accuracy objective.",
             "source_correction": "The paper calls the +23% endpoint a much larger gap and reports -21% accuracy; it does not call that endpoint a modest accuracy tradeoff.",
             "verdict_rule": "VERIFIED iff the primary paper-feature route has a best mean welfare gain in [20,26] percent and either relative or percentage-point accuracy change in [-24,-18], all preprocessing routes have positive 99% lower welfare-gain bounds, all solvers converge, the independent welfare identity passes, and the equal-value control removes the effect.",
+        },
+    )
+    write_json(
+        claim_dir / "preprocessing_contract.json",
+        {
+            "declared_before_run": True,
+            "ordinal_unchanged": list(ORDINAL_FEATURES),
+            "binary_rules": {
+                "COW": "1 iff code in {1,2,3,4,5}",
+                "MAR": "1 iff code == 1",
+                "RELP": "1 iff code in {0,1,13}",
+                "SEX": "1 iff code == 1",
+                "RAC1P": "1 iff code == 1",
+                "DIS": "1 iff code == 1",
+                "ESR": "1 iff code in {1,2,4,5}",
+                "HISP": "1 iff code > 1",
+                "MIG": "1 iff code != 1",
+            },
+            "occupation_group_edges": [
+                0,
+                1600,
+                2100,
+                3000,
+                3700,
+                4200,
+                4300,
+                4700,
+                5000,
+                6000,
+                6200,
+                7000,
+                7700,
+                9000,
+                10_000,
+            ],
+            "occupation_encoding": "14 one-hot groups",
+            "categorical_noise": {"distribution": "Normal(0, 0.4)", "seed_base": 460800},
+            "sensitivity_routes": list(ROUTES[1:]),
         },
     )
     write_text(
@@ -482,9 +577,12 @@ def main() -> int:
         "the exact weights (1-alpha)+alpha*v. Normalized welfare is the value "
         "of correct predictions divided by total possible value. Three "
         "preprocessing routes address the paper's under-specified rule-based "
-        "mapping: all 13 stated features with sigma=0.4 categorical jitter, "
-        "the same clean features, and the official Folktables ACSIncome "
-        "features. Splits are paired across routes.\n",
+        "mapping. The primary route retains SCHL, AGEP, and WKHP as ordinal, "
+        "maps the other stated demographic and employment fields to declared "
+        "binary indicators, maps OCCP into 14 semantic broad groups and "
+        "one-hot encodes them, then adds sigma=0.4 noise to categorical "
+        "entries. Sensitivities remove the noise or leave COW and ESR "
+        "ordinal. Splits are paired across routes.\n",
     )
     write_rows(claim_dir / "raw_frontier.csv", rows)
     write_json(claim_dir / "raw_summary.json", summary)
@@ -524,10 +622,12 @@ def main() -> int:
     write_text(
         claim_dir / "limitations.md",
         "# Limitations and deviations\n\nThe paper does not publish the exact "
-        "rule-based demographic mappings, 14 occupation groups, selected "
-        "regularization coefficient, raw trial seeds, or Figure 3 data. The "
-        "three declared preprocessing routes quantify this ambiguity rather "
-        "than silently choosing one. The paper's +23% and -21% values appear "
+        "rule-based demographic mappings, boundaries for its 14 occupation "
+        "groups, selected regularization coefficient, raw trial seeds, or "
+        "Figure 3 data. This route declares a semantic 14-group coarsening "
+        "before seeing its result, and the three routes quantify mapping/noise "
+        "ambiguity rather than silently choosing one. The paper's +23% and "
+        "-21% values appear "
         "rounded from a plotted frontier, so the preregistered equivalence "
         "band is ±3 percentage points.\n",
     )
