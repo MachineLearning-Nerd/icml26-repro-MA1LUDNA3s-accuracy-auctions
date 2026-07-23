@@ -11,6 +11,16 @@
     "count": 5,
     "format": "PNG"
   },
+  "formal_cumulative_run": {
+    "claim_1_and_4_stage": "PASS",
+    "claim_2_and_3_stage": "PASS",
+    "claim_5_stage": "PASS",
+    "claim_6_stage": "BLOCKED",
+    "commit": "68373bc5788c0a592bfc4b87ac9dd5637d46cf73",
+    "duration_seconds": 773,
+    "expected_nonzero_exit_due_to_blocked_claim": true,
+    "run_id": "e721fc26-ae7f-4134-a468-ca64e2ce2782"
+  },
   "hf_upload": {
     "allowlisted_file_count": 85,
     "manifest_row_count": 85,

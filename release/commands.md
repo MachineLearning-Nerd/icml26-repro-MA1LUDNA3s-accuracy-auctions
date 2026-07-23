@@ -25,6 +25,7 @@ orx exp run 47e51ede-8bac-48a8-9992-a958a6dbe69a --backend hf --flavor cpu-upgra
 orx exp run 75d92879-8844-4fa4-bbad-d7da38e561db --backend hf --flavor cpu-upgrade
 orx exp run a81a8546-84d5-4173-a8a6-e27c52cb1eef --backend hf --flavor cpu-upgrade
 orx exp run 12981fa4-f517-4c68-915e-52190e3687d4 --backend hf --flavor cpu-upgrade
+orx exp run 1b92755f-8171-4f7d-bfe2-5065cd1028d9 --backend hf --flavor cpu-upgrade --image ghcr.io/astral-sh/uv:python3.12-bookworm-slim --timeout 3600
 ```
 
 The HF runs used image

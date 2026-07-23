@@ -4,8 +4,8 @@
     "backend": "hf",
     "cost_basis_url": "https://huggingface.co/docs/hub/en/jobs-pricing",
     "cpu_upgrade_price_usd_per_hour": 0.03,
-    "pre_release_candidate_duration_seconds": 3170,
-    "pre_release_candidate_estimated_cost_usd": 0.02642,
+    "duration_seconds_all_runs": 3943,
+    "estimated_cost_usd_from_observed_duration": 0.03286,
     "runs_included": [
       {
         "duration_seconds": 11,
@@ -31,8 +31,14 @@
         "duration_seconds": 763,
         "note": "Claim 6 route 4",
         "run_id": "aeccb3f2-f952-4438-908c-e0886bf4dcd1"
+      },
+      {
+        "duration_seconds": 773,
+        "note": "cumulative release regression; Claims 1-5 pass and Claim 6 exits nonzero as BLOCKED",
+        "run_id": "e721fc26-ae7f-4134-a468-ca64e2ce2782"
       }
-    ]
+    ],
+    "billing_note": "Estimate uses observed orx durations. Hugging Face also bills Starting time, so the invoice may differ."
   },
   "local": {
     "duration_seconds_all_formal_runs": 2093,

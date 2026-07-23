@@ -136,7 +136,11 @@ All accepted local experiments used the same repository-level `.venv`, Python
 3.12 lock, and cached dependencies. The exact-theorem, asymptotic, and Figure 2
 checks ran on an 8-core Apple CPU. Claim 6 moved to Hugging Face
 `cpu-upgrade` only after the local host was measured at sustained overload; no
-GPU was used. Each artifact directory contains the contract, source audit,
+GPU was used. Across all formal attempts, local runs consumed 34m53s at no
+incremental cloud cost; HF CPU runs consumed 1h05m43s. At the official
+[`cpu-upgrade` rate of $0.03/hour](https://huggingface.co/docs/hub/en/jobs-pricing),
+the observed-duration estimate is **$0.03286** (the invoice can differ because
+HF also bills Starting time). Each artifact directory contains the contract, source audit,
 method, raw CSV/JSON, verifier output, independent checker, negative control,
 environment, command, evaluation, and limitations.
 
