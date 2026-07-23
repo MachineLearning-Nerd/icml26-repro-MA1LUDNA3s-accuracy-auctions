@@ -34,7 +34,7 @@
     }
   },
   "fixed_command": "uv run --frozen python repro/src/verify_auctions.py",
-  "git_sha": "ece2eb14505a7204baae254ae90e731ce0ab43c5",
-  "runtime_seconds": 0.2850988749996759,
+  "git_sha": "51bf84066a82aaa910c5b862f25208fbac2598fd",
+  "runtime_seconds": 0.27259733399841934,
   "stage": "exact_theorem_contracts"
 }

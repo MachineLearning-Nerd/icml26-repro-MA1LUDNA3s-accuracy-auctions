@@ -1,0 +1,7 @@
+{
+  "control": "remove_label_noise_all_labels_positive",
+  "control_failed_as_intended": true,
+  "datasets": 15,
+  "total_payers": 0,
+  "total_revenue": 0.0
+}

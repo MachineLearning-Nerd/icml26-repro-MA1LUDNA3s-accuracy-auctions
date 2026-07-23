@@ -1,0 +1,103 @@
+{
+  "k": 31,
+  "m_values": [
+    500,
+    1000,
+    2000,
+    4000,
+    8000,
+    16000,
+    32000
+  ],
+  "passed": true,
+  "sample_size_growth": 64.0,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "summaries": [
+    {
+      "m": 500,
+      "mean_payer_fraction": 0.06420000000000001,
+      "mean_revenue_per_user": 0.020292859521319057,
+      "payer_fraction_ci99_high": 0.0716129041707976,
+      "payer_fraction_ci99_low": 0.05678709582920241,
+      "revenue_per_user_ci99_high": 0.023772014885878694,
+      "revenue_per_user_ci99_low": 0.01681370415675942
+    },
+    {
+      "m": 1000,
+      "mean_payer_fraction": 0.0627,
+      "mean_revenue_per_user": 0.02105971511797706,
+      "payer_fraction_ci99_high": 0.06810477977556988,
+      "payer_fraction_ci99_low": 0.057295220224430135,
+      "revenue_per_user_ci99_high": 0.023170588983706716,
+      "revenue_per_user_ci99_low": 0.0189488412522474
+    },
+    {
+      "m": 2000,
+      "mean_payer_fraction": 0.05992499999999999,
+      "mean_revenue_per_user": 0.019726021541171358,
+      "payer_fraction_ci99_high": 0.0643159754449866,
+      "payer_fraction_ci99_low": 0.055534024555013384,
+      "revenue_per_user_ci99_high": 0.021421436239379237,
+      "revenue_per_user_ci99_low": 0.018030606842963478
+    },
+    {
+      "m": 4000,
+      "mean_payer_fraction": 0.0628,
+      "mean_revenue_per_user": 0.021199637827468157,
+      "payer_fraction_ci99_high": 0.06514625557461158,
+      "payer_fraction_ci99_low": 0.0604537444253884,
+      "revenue_per_user_ci99_high": 0.021953895777523654,
+      "revenue_per_user_ci99_low": 0.02044537987741266
+    },
+    {
+      "m": 8000,
+      "mean_payer_fraction": 0.0620375,
+      "mean_revenue_per_user": 0.020720149469427372,
+      "payer_fraction_ci99_high": 0.06421559677639413,
+      "payer_fraction_ci99_low": 0.05985940322360588,
+      "revenue_per_user_ci99_high": 0.021596671801579533,
+      "revenue_per_user_ci99_low": 0.01984362713727521
+    },
+    {
+      "m": 16000,
+      "mean_payer_fraction": 0.062696875,
+      "mean_revenue_per_user": 0.020634643110125424,
+      "payer_fraction_ci99_high": 0.06426892724812815,
+      "payer_fraction_ci99_low": 0.06112482275187185,
+      "revenue_per_user_ci99_high": 0.021376912908707597,
+      "revenue_per_user_ci99_low": 0.01989237331154325
+    },
+    {
+      "m": 32000,
+      "mean_payer_fraction": 0.0630890625,
+      "mean_revenue_per_user": 0.02078410807398732,
+      "payer_fraction_ci99_high": 0.06403514487042623,
+      "payer_fraction_ci99_low": 0.06214298012957376,
+      "revenue_per_user_ci99_high": 0.021180262538391715,
+      "revenue_per_user_ci99_low": 0.020387953609582923
+    }
+  ],
+  "tail_ci99_strictly_positive": true,
+  "tail_loglog_exponent": 1.011179051491255
+}

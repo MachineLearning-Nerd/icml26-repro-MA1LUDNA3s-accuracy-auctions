@@ -1,8 +1,8 @@
 """Fixed OpenResearch entrypoint for the cumulative reproduction campaign.
 
-Every experiment node invokes this file through the inherited command. The
-legacy judged checks run first as regressions, followed by the stronger claim
-contracts implemented by the current branch.
+Every experiment node invokes this file through the inherited command. Only
+accepted claim contracts are cumulative; the frozen baseline retains the
+legacy judged checks.
 """
 from __future__ import annotations
 
@@ -29,9 +29,9 @@ print(
     "uv run --frozen python repro/src/verify_auctions.py",
     flush=True,
 )
-print("CUMULATIVE_REGRESSION: legacy judged checks", flush=True)
-run("legacy_verify_auctions.py")
 print("CUMULATIVE_REGRESSION: exact theorem contracts", flush=True)
 run("verify_theory_contracts.py")
 print("CUMULATIVE_REGRESSION: assumption-faithful asymptotics", flush=True)
 run("verify_asymptotics.py")
+print("CUMULATIVE_REGRESSION: faithful Figure 2", flush=True)
+run("verify_figure2.py")

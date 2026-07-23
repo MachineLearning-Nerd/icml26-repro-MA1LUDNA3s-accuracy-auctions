@@ -1,0 +1,21 @@
+{
+  "claim_2": {
+    "claim_id": 2,
+    "outside_candidate_payers": 0,
+    "passed": true,
+    "payer_count_tail_loglog_exponent": 0.008098745990418384,
+    "payment_tail_loglog_exponent": 0.07303185622288984,
+    "verdict": "VERIFIED"
+  },
+  "claim_3": {
+    "claim_id": 3,
+    "independent_tail_exponent": 1.0210011184442094,
+    "no_noise_total_revenue": 0.0,
+    "passed": true,
+    "primary_tail_exponent": 1.011179051491255,
+    "verdict": "VERIFIED"
+  },
+  "git_sha": "51bf84066a82aaa910c5b862f25208fbac2598fd",
+  "runtime_seconds": 41.326089292007964,
+  "stage": "assumption_faithful_asymptotics"
+}
