@@ -35,35 +35,7 @@ CENSUS_URL = (
     "https://www2.census.gov/programs-surveys/acs/data/pums/"
     "2018/1-Year/csv_pnj.zip"
 )
-PAPER_FEATURES = (
-    "COW",
-    "SCHL",
-    "MAR",
-    "OCCP",
-    "RELP",
-    "SEX",
-    "RAC1P",
-    "AGEP",
-    "DIS",
-    "ESR",
-    "HISP",
-    "WKHP",
-    "MIG",
-)
-OFFICIAL_FEATURES = (
-    "AGEP",
-    "COW",
-    "SCHL",
-    "MAR",
-    "OCCP",
-    "POBP",
-    "RELP",
-    "WKHP",
-    "SEX",
-    "RAC1P",
-)
 ORDINAL_FEATURES = ("SCHL", "AGEP", "WKHP")
-DEMOGRAPHIC_FEATURES = ("MAR", "RELP", "SEX", "RAC1P", "DIS", "HISP", "MIG")
 ROUTES = (
     "paper_mapped_noisy",
     "paper_mapped_clean",
@@ -72,6 +44,7 @@ ROUTES = (
 TRIALS = tuple(range(5))
 ALPHAS = tuple(float(value) for value in np.linspace(0.0, 1.0, 20))
 V_PLUS_VALUES = (4, 6, 8, 10, 12)
+REGULARIZATION_GRID = (0.001, 0.01, 0.1, 1.0, 10.0, 100.0)
 SAMPLE_SIZE = 30_000
 TRAIN_SIZE = 18_000
 VALIDATION_SIZE = 12_000
@@ -232,9 +205,10 @@ def fit_model(
     train_features: np.ndarray,
     train_labels: np.ndarray,
     weights: np.ndarray,
+    c_value: float,
 ) -> tuple[LogisticRegression, bool]:
     model = LogisticRegression(
-        C=1.0,
+        C=c_value,
         penalty="l2",
         solver="liblinear",
         fit_intercept=True,
@@ -245,6 +219,46 @@ def fit_model(
     model.fit(train_features, train_labels, sample_weight=weights)
     converged = int(np.max(np.atleast_1d(model.n_iter_))) < model.max_iter
     return model, converged
+
+
+def select_regularization(
+    train_features: np.ndarray,
+    train_labels: np.ndarray,
+    trial: int,
+) -> tuple[float, dict[str, Any]]:
+    inner_fit, inner_tune = train_test_split(
+        np.arange(len(train_labels)),
+        train_size=0.8,
+        random_state=560_900 + trial,
+        stratify=train_labels,
+    )
+    candidates = []
+    for c_value in REGULARIZATION_GRID:
+        model, converged = fit_model(
+            train_features[inner_fit],
+            train_labels[inner_fit],
+            np.ones(len(inner_fit), dtype=np.float64),
+            c_value,
+        )
+        accuracy = float(
+            np.mean(model.predict(train_features[inner_tune]) == train_labels[inner_tune])
+        )
+        candidates.append(
+            {
+                "C": c_value,
+                "inner_accuracy": accuracy,
+                "optimizer_converged": converged,
+            }
+        )
+    selected = max(candidates, key=lambda row: (row["inner_accuracy"], -row["C"]))
+    return float(selected["C"]), {
+        "trial": trial,
+        "selection_objective": "unweighted inner-training accuracy",
+        "inner_fit_size": int(len(inner_fit)),
+        "inner_tune_size": int(len(inner_tune)),
+        "selected_C": selected["C"],
+        "candidates": candidates,
+    }
 
 
 def metrics(
@@ -273,7 +287,7 @@ def run_trial(
     labels: np.ndarray,
     route: str,
     trial: int,
-) -> list[dict[str, Any]]:
+) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     started = time.perf_counter()
     train_indices, validation_indices = split_indices(labels, trial)
     features = route_features(data, route, trial)
@@ -282,9 +296,14 @@ def run_trial(
     )
     y_train = labels[train_indices]
     y_validation = labels[validation_indices]
+    selected_c, tuning = select_regularization(x_train, y_train, trial)
+    tuning["route"] = route
     rows = []
     baseline_model, baseline_converged = fit_model(
-        x_train, y_train, np.ones(len(y_train), dtype=np.float64)
+        x_train,
+        y_train,
+        np.ones(len(y_train), dtype=np.float64),
+        selected_c,
     )
     baseline_prediction = baseline_model.predict(x_validation)
     for v_plus in V_PLUS_VALUES:
@@ -297,6 +316,7 @@ def run_trial(
                 "trial": trial,
                 "v_plus": v_plus,
                 "alpha": 0.0,
+                "selected_C": selected_c,
                 "optimizer_converged": baseline_converged,
                 **baseline_metrics,
             }
@@ -305,7 +325,7 @@ def run_trial(
         for alpha in ALPHAS[1:]:
             weights = (1.0 - alpha) + alpha * train_values
             model, converged = fit_model(
-                x_train, y_train, weights
+                x_train, y_train, weights, selected_c
             )
             prediction = model.predict(x_validation)
             rows.append(
@@ -314,6 +334,7 @@ def run_trial(
                     "trial": trial,
                     "v_plus": v_plus,
                     "alpha": alpha,
+                    "selected_C": selected_c,
                     "optimizer_converged": converged,
                     **metrics(prediction, y_validation, v_plus),
                 }
@@ -330,6 +351,7 @@ def run_trial(
             {
                 "route": route,
                 "trial": trial,
+                "selected_C": selected_c,
                 "welfare_gain_percent": 100.0
                 * (
                     endpoint["normalized_welfare"]
@@ -343,7 +365,7 @@ def run_trial(
         ),
         flush=True,
     )
-    return rows
+    return rows, tuning
 
 
 def endpoint_summary(rows: list[dict[str, Any]]) -> dict[str, Any]:
@@ -437,13 +459,14 @@ def negative_control(
     )
     y_train = labels[train_indices]
     y_validation = labels[validation_indices]
+    selected_c, _ = select_regularization(x_train, y_train, 0)
     predictions = []
     converged = []
     for alpha in (0.0, 0.5, 1.0):
         # If all values equal one, interpolation leaves every weight exactly
         # one for every alpha.
         weights = (1.0 - alpha) + alpha * np.ones(len(y_train))
-        model, ok = fit_model(x_train, y_train, weights)
+        model, ok = fit_model(x_train, y_train, weights, selected_c)
         predictions.append(model.predict(x_validation))
         converged.append(ok)
     identical = all(
@@ -452,6 +475,7 @@ def negative_control(
     )
     return {
         "control": "all_values_equal_one",
+        "selected_C": selected_c,
         "alphas": [0.0, 0.5, 1.0],
         "predictions_identical": identical,
         "welfare_gain_percent": 0.0 if identical else None,
@@ -475,13 +499,16 @@ def main() -> int:
     labels = (data["PINCP"].to_numpy() > 50_000).astype(np.int8)
     tasks = [(route, trial) for route in ROUTES for trial in TRIALS]
     rows = []
+    tuning_records = []
     with ThreadPoolExecutor(max_workers=min(4, os.cpu_count() or 1)) as executor:
         futures = [
             executor.submit(run_trial, data, labels, route, trial)
             for route, trial in tasks
         ]
         for future in futures:
-            rows.extend(future.result())
+            trial_rows, tuning = future.result()
+            rows.extend(trial_rows)
+            tuning_records.append(tuning)
     summary = endpoint_summary(rows)
     independent = independent_metric_checker(rows)
     negative = negative_control(data, labels)
@@ -515,7 +542,7 @@ def main() -> int:
         {
             "claim_id": 6,
             "paper_anchor": "S7.F3",
-            "route_id": "paper_mapped_preprocessing",
+            "route_id": "nested_regularization_selection",
             "statement": "On NJ ACSIncome with label-based values v(0)=1 and v(1)=v_plus, optimizing welfare produces an endpoint with about +23% normalized welfare and -21% accuracy relative to the alpha=0 accuracy objective.",
             "source_correction": "The paper calls the +23% endpoint a much larger gap and reports -21% accuracy; it does not call that endpoint a modest accuracy tradeoff.",
             "verdict_rule": "VERIFIED iff the primary paper-feature route has a best mean welfare gain in [20,26] percent and either relative or percentage-point accuracy change in [-24,-18], all preprocessing routes have positive 99% lower welfare-gain bounds, all solvers converge, the independent welfare identity passes, and the equal-value control removes the effect.",
@@ -575,7 +602,11 @@ def main() -> int:
         "training and 12,000 validation records. Each evaluates 20 alpha "
         "values and v_plus in {4,6,8,10,12} using L2 logistic regression and "
         "the exact weights (1-alpha)+alpha*v. Normalized welfare is the value "
-        "of correct predictions divided by total possible value. Three "
+        "of correct predictions divided by total possible value. The "
+        "unpublished regularization coefficient is selected separately per "
+        "route and trial on an inner 80/20 training split from the fixed grid "
+        "{0.001,0.01,0.1,1,10,100}, using only unweighted accuracy; the "
+        "untouched 12,000-row validation split is never used for tuning. Three "
         "preprocessing routes address the paper's under-specified rule-based "
         "mapping. The primary route retains SCHL, AGEP, and WKHP as ordinal, "
         "maps the other stated demographic and employment fields to declared "
@@ -586,6 +617,18 @@ def main() -> int:
     )
     write_rows(claim_dir / "raw_frontier.csv", rows)
     write_json(claim_dir / "raw_summary.json", summary)
+    write_json(
+        claim_dir / "regularization_selection.json",
+        {
+            "declared_before_run": True,
+            "grid": list(REGULARIZATION_GRID),
+            "selection_data": "inner 80/20 split of the 18,000 training rows",
+            "selection_objective": "unweighted classification accuracy",
+            "tie_break": "smallest C",
+            "outer_validation_used_for_selection": False,
+            "records": tuning_records,
+        },
+    )
     write_json(claim_dir / "data_source.json", data_record)
     write_json(claim_dir / "independent_checker_output.json", independent)
     write_json(claim_dir / "negative_control_output.json", negative)
@@ -623,8 +666,9 @@ def main() -> int:
         claim_dir / "limitations.md",
         "# Limitations and deviations\n\nThe paper does not publish the exact "
         "rule-based demographic mappings, boundaries for its 14 occupation "
-        "groups, selected regularization coefficient, raw trial seeds, or "
-        "Figure 3 data. This route declares a semantic 14-group coarsening "
+        "groups, selected regularization coefficient or tuning protocol, raw "
+        "trial seeds, or Figure 3 data. This route declares nested tuning and "
+        "a semantic 14-group coarsening "
         "before seeing its result, and the three routes quantify mapping/noise "
         "ambiguity rather than silently choosing one. The paper's +23% and "
         "-21% values appear "
@@ -637,6 +681,7 @@ def main() -> int:
     for filename in (
         "EVAL.md",
         "raw_summary.json",
+        "regularization_selection.json",
         "data_source.json",
         "independent_checker_output.json",
         "negative_control_output.json",
