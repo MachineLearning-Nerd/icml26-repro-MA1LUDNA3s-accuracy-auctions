@@ -1,0 +1,12 @@
+{
+  "assumptions": [
+    "binary allocation is monotone",
+    "payment is the critical bid when allocated and zero otherwise",
+    "truthful bidding",
+    "zero bid entails zero payment"
+  ],
+  "claim_id": 4,
+  "paper_anchor": "Thmcorollary1",
+  "statement": "With truthful bidding and normalized critical-bid payments, payment is at most valuation and utility is nonnegative.",
+  "verdict_rule": "VERIFIED iff exhaustive DSIC/IR enumeration, the independent payment identity, and the overcharge control all behave as specified."
+}

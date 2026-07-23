@@ -1,0 +1,3 @@
+# Method
+
+The left panel uses the stated d=16 balanced Gaussian model, seven sigma values, five geometrically spaced sample sizes from 4,096 to 65,536, and ten deterministic trials. The largest size is 117× the old reproduction and the sweep contains 350 datasets. A user pays exactly when the reported-bid model classifies them correctly and the zero-bid refit does not. Equation 24 safely prescreens candidates; an independent all-user checker bypasses that screen. The right panel uses independent 5,000-example test sets, never allocation rate, over 540 datasets. Ninety-nine-percent t intervals are computed across seeds.

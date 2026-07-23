@@ -1,0 +1,10 @@
+{
+  "alternate_runs_negate_existential": false,
+  "claim_id": 6,
+  "exact_author_configuration_known": false,
+  "falsification_established": false,
+  "passed": false,
+  "reason": "The published claim is existential/descriptive ('up to'), the unpublished preprocessing boundaries, tuning protocol, and seeds prevent matching every author-side assumption, and two independent figure readings support rather than contradict the reported band.",
+  "source_itself_contradicts_claim": false,
+  "verdict": "BLOCKED"
+}

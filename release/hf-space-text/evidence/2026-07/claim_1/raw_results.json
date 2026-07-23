@@ -1,0 +1,6 @@
+{
+  "antecedent_cases": 24543,
+  "passed": true,
+  "route": "two_optimality_inequalities_exact_integer_exhaustion",
+  "violations": []
+}

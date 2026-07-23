@@ -1,0 +1,14 @@
+{
+  "candidate_tree": "files/claim-by-claim-evidence-release-candidate/hf-space-candidate",
+  "changed_old_paths": [
+    "logbook.json",
+    "pages/index.md"
+  ],
+  "changed_old_paths_are_additive_navigation_updates": true,
+  "judged_revision": "c55042270cb78121f72a1a0ce1fffe8ef25bbaaa",
+  "missing_old_paths": [],
+  "new_file_count": 138,
+  "old_file_count": 55,
+  "old_path_set_is_subset": true,
+  "unchanged_old_file_count": 53
+}

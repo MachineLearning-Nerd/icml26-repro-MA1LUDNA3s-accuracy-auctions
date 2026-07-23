@@ -1,0 +1,40 @@
+{
+  "claim_id": 5,
+  "paper_anchor": "S7.F2",
+  "paper_parameters": {
+    "lambda": 1,
+    "left": {
+      "class_mean_distance": 0.5,
+      "dimension": 16,
+      "equal_values": true,
+      "sigmas": [
+        0.1,
+        0.2,
+        0.5,
+        1.0,
+        1.5,
+        2.0,
+        2.5
+      ]
+    },
+    "loss": "linear SVM with hinge loss",
+    "right": {
+      "dimensions": [
+        2,
+        4,
+        8,
+        16,
+        32,
+        64
+      ],
+      "m": 500,
+      "mu_range": [
+        0,
+        6
+      ],
+      "sigma": 1
+    }
+  },
+  "statement": "For the Section 7.1 Gaussian setup, payer count plateaus as m grows across sigma settings, and higher held-out classification accuracy is associated with a lower payer proportion across dimensions.",
+  "verdict_rule": "VERIFIED iff every sigma has a 99% upper slope below 0.5, every dimension has a 99% upper Spearman bound below -0.1 using held-out accuracy, the all-user checker finds no missed payer, both negative controls fail as intended, and every solver converges."
+}

@@ -1,0 +1,6 @@
+{
+  "control": "synthetic_linear_payment_sequence",
+  "expected_rejection": true,
+  "loglog_exponent": 1.0000000000000002,
+  "rejected_as_intended": true
+}

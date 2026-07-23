@@ -1,0 +1,11 @@
+{
+  "assumptions": [
+    "score-based weighted ERM returns an exact loss minimizer",
+    "the margin loss is decreasing or has the paper's separating threshold",
+    "binary correctness is determined by the margin sign"
+  ],
+  "claim_id": 1,
+  "paper_anchor": "Thmtheorem1",
+  "statement": "For every i, fixed b_-i, and b_i' > b_i, a_i(b_i';b_-i) >= a_i(b_i;b_-i).",
+  "verdict_rule": "VERIFIED iff both exact routes pass and the assumption-breaking control fails as intended."
+}

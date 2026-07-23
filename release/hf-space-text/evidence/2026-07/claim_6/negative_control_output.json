@@ -1,0 +1,10 @@
+{
+  "control": "replace_published_endpoint_welfare_0.925_with_0.680",
+  "control_failed_as_intended": true,
+  "corrupted_result": {
+    "accuracy_change_percent": -23.497267759562835,
+    "accuracy_change_points": -17.199999999999992,
+    "welfare_gain_percent": -9.333333333333327
+  },
+  "detector_rejected_corruption": true
+}

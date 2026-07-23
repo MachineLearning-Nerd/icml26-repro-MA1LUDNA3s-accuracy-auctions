@@ -1,0 +1,29 @@
+{
+  "candidate_logbook": {
+    "all_declared_page_files_exist": true,
+    "child_claim_page_count": 6,
+    "json_valid": true,
+    "root_child_count": 6,
+    "space_id": "DineshAI/MA1LUDNA3s"
+  },
+  "figures": {
+    "all_report_links_resolve": true,
+    "count": 5,
+    "format": "PNG"
+  },
+  "hf_upload": {
+    "allowlisted_file_count": 85,
+    "manifest_row_count": 85,
+    "text_only": true
+  },
+  "notebook": {
+    "byte_compile_passed": true,
+    "exported_html_bytes": 148331,
+    "marimo_check_available_in_pinned_0_15_5": false,
+    "marimo_export_completed_without_failed_cells": true
+  },
+  "secret_scan": {
+    "candidate_files_matching_common_secret_patterns": 0,
+    "passed": true
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "claim_id": 4,
+  "independent_checks": 441,
+  "negative_control_violations": 12,
+  "passed": true,
+  "threshold_value_cases": 182,
+  "verdict": "VERIFIED"
+}

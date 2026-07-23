@@ -1,0 +1,17 @@
+{
+  "assumptions_instantiated": {
+    "conditional_label_probability": "1/2 independent of feature and valuation",
+    "critical_bid": "closed form from Appendix A.8 and the official code's smallest_v_for_flip",
+    "feature_region": "Uniform[-0.25,0.25]^2; all mass lies in one bounded region",
+    "fixed_k_independent": 63,
+    "fixed_k_primary": 31,
+    "valuation_distribution": "Uniform[0,1], explicitly listed as sufficiently smooth by Appendix A.9"
+  },
+  "claim_id": 3,
+  "paper_anchors": [
+    "Thmtheorem3",
+    "Thmtheorem6"
+  ],
+  "statement": "For sufficiently large fixed k, expected weighted-kNN payer count and revenue are Omega(m) under the formal noise-region and smooth-valuation assumptions.",
+  "verdict_rule": "VERIFIED when the last four m values have strictly positive 99% lower bounds for revenue/user and payer fraction, the tail exponent is in [0.75,1.25] for both fixed k routes, and removing label noise yields exactly zero payment."
+}
