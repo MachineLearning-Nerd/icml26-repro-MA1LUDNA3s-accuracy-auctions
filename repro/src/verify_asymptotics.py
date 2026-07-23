@@ -107,6 +107,10 @@ def logistic_payments(
     all_converged = True
     for raw_index in check_indices:
         index = int(raw_index)
+        # An agent that is not allocated at the reported bid pays zero by
+        # Myerson's rule; only a currently correct point can be a payer.
+        if margins[index] <= 0.0:
+            continue
         zero_values = values.copy()
         zero_values[index] = 0.0
         zero_weight, ok, _, _ = fit_weighted_logistic(
