@@ -1,0 +1,39 @@
+{
+  "accuracy_control": "heldout_labels_independently_permuted",
+  "linear_control_loglog_slope": 1.0,
+  "linear_control_rejected_as_intended": true,
+  "per_dimension_shuffled_correlations": [
+    {
+      "ci99_high": 0.4301032970238322,
+      "dimension": 2,
+      "mean": 0.13520849489215062
+    },
+    {
+      "ci99_high": 0.36035188938320334,
+      "dimension": 4,
+      "mean": -0.0002956589876863702
+    },
+    {
+      "ci99_high": 0.44349195423927357,
+      "dimension": 8,
+      "mean": 0.1413284679465062
+    },
+    {
+      "ci99_high": 0.4730319545982627,
+      "dimension": 16,
+      "mean": 0.07613408000902848
+    },
+    {
+      "ci99_high": 0.2878373406159387,
+      "dimension": 32,
+      "mean": -0.010070252878571148
+    },
+    {
+      "ci99_high": 0.47575332351797034,
+      "dimension": 64,
+      "mean": 0.21330510259261382
+    }
+  ],
+  "plateau_control": "payer_count_equal_to_sample_size",
+  "shuffled_control_failed_claim_as_intended": true
+}

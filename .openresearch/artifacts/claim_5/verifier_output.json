@@ -1,0 +1,9 @@
+{
+  "all_dimensions_negative_accuracy_association": true,
+  "all_optimizers_converged": true,
+  "all_sigma_plateau": true,
+  "claim_id": 5,
+  "missed_payers": 0,
+  "passed": true,
+  "verdict": "VERIFIED"
+}

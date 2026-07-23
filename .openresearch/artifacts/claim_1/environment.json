@@ -1,8 +1,8 @@
 {
   "command": "uv run --frozen python repro/src/verify_auctions.py",
   "deterministic_seeds": [],
-  "elapsed_seconds": 0.2079187500057742,
-  "git_sha": "51bf84066a82aaa910c5b862f25208fbac2598fd",
+  "elapsed_seconds": 0.19352125003933907,
+  "git_sha": "8c78c9e8a1e115e830f5b4082aa2821892df3a57",
   "logical_cpu_count": 8,
   "machine": "arm64",
   "packages": {

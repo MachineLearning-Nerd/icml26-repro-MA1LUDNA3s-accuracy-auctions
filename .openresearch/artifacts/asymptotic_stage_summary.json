@@ -15,7 +15,7 @@
     "primary_tail_exponent": 1.011179051491255,
     "verdict": "VERIFIED"
   },
-  "git_sha": "51bf84066a82aaa910c5b862f25208fbac2598fd",
-  "runtime_seconds": 41.326089292007964,
+  "git_sha": "8c78c9e8a1e115e830f5b4082aa2821892df3a57",
+  "runtime_seconds": 48.09001733298646,
   "stage": "assumption_faithful_asymptotics"
 }
