@@ -1,8 +1,15 @@
 {
-  "paper": "MA1LUDNA3s",
-  "tests_passed": true,
-  "publication_gate_passed": true,
-  "claims_verified": 6,
+  "arxiv": "2606.02435",
+  "claims_blocked": 1,
+  "claims_falsified": 0,
   "claims_total": 6,
-  "arxiv": "2606.02435"
+  "claims_verified": 5,
+  "live_judge_head": "c55042270cb78121f72a1a0ce1fffe8ef25bbaaa",
+  "live_judge_score": "5/12",
+  "paper": "MA1LUDNA3s",
+  "publication_gate_passed": true,
+  "publication_status": "awaiting_judge",
+  "published_space_revision": "1d9f5ffa9259a22f633cc426250fc3f190158186",
+  "score_increase_claimed": false,
+  "tests_passed": true
 }
