@@ -80,3 +80,24 @@ The release gate also parses every JSON file, resolves every logbook page,
 checks all report image targets, verifies the old path set is a subset of the
 candidate, recomputes the 85-file SHA-256 upload manifest, and scans the
 candidate for common credential formats without printing any matched value.
+
+## Publication
+
+The initial high-level upload command was attempted once:
+
+```text
+hf upload DineshAI/MA1LUDNA3s release/hf-space-text . --repo-type space --commit-message "Add rigorous claim-by-claim reproduction evidence"
+```
+
+It was rejected before creating a commit because the CLI called the
+repository-creation endpoint and encountered a rate limit. After the stated API
+window, the existing-repository `HfApi.create_commit` path submitted exactly the
+85 `CommitOperationAdd` entries from `release/upload-allowlist.txt`, with
+parent commit `c55042270cb78121f72a1a0ce1fffe8ef25bbaaa` and no delete
+operations.
+
+The resulting revision is:
+
+```text
+1d9f5ffa9259a22f633cc426250fc3f190158186
+```

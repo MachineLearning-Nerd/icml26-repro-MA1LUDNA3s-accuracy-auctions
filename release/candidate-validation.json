@@ -32,6 +32,13 @@
     "marimo_check_available_in_pinned_0_15_5": false,
     "marimo_export_completed_without_failed_cells": true
   },
+  "published_space": {
+    "actual_repository_file_count": 100,
+    "all_85_upload_hashes_verified": true,
+    "all_17_judged_hub_paths_retained": true,
+    "revision": "1d9f5ffa9259a22f633cc426250fc3f190158186",
+    "space_id": "DineshAI/MA1LUDNA3s"
+  },
   "secret_scan": {
     "candidate_files_matching_common_secret_patterns": 0,
     "passed": true

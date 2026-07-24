@@ -11,6 +11,10 @@ versus the paper's “up to 23%,” while closely matching its reported accuracy
 change. The paper's existential wording and missing preprocessing/tuning
 details prevent a valid verification or assumption-complete counterexample.
 
+Published evidence: Hugging Face Space revision
+[`1d9f5ffa9259a22f633cc426250fc3f190158186`](https://huggingface.co/spaces/DineshAI/MA1LUDNA3s/commit/1d9f5ffa9259a22f633cc426250fc3f190158186).
+The live score remains **5/12** until a new judge verdict is produced.
+
 This replaces the earlier small single-seed checks with exact breakpoint
 certificates (Claims 1 and 4), 64× asymptotic sweeps with 20 seeds (Claims 2 and
 3), and actual held-out classification accuracy over 890 datasets (Claim 5).

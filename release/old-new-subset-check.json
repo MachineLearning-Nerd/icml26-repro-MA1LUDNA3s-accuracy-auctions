@@ -1,5 +1,17 @@
 {
   "candidate_tree": "files/claim-by-claim-evidence-release-candidate/hf-space-candidate",
+  "actual_published_hub_check": {
+    "additive_navigation_changes": [
+      "logbook.json",
+      "pages/index.md"
+    ],
+    "final_file_count": 100,
+    "judged_hub_file_count": 17,
+    "missing_judged_hub_paths": [],
+    "published_revision": "1d9f5ffa9259a22f633cc426250fc3f190158186",
+    "unchanged_judged_hub_files": 15,
+    "upload_hashes_verified": 85
+  },
   "changed_old_paths": [
     "logbook.json",
     "pages/index.md"
