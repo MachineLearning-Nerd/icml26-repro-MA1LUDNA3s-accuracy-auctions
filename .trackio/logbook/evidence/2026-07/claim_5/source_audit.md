@@ -1,0 +1,3 @@
+# Source audit
+
+Paper source `abdd0eb6dbcb4bc119c71405ea5e0d944ec598efef39c8c8da776f545916654d`, retrieved 2026-07-23T15:55:59Z; anchor `#S7.F2` and Appendix C.1. Author code [https://github.com/BML-Technion/accuracy_auctions](https://github.com/BML-Technion/accuracy_auctions) at `0bffe47c4907587bf1808fd3fec02dcf6f2864ec`. The paper states mean distance 0.5, while `exp_4.py` uses means ±0.2 (distance 0.4); this reproduction follows the paper's quantified prose. The paper says lambda=1 and Equation 4 averages loss over m; the implementation sets LinearSVC C=1/(2*lambda*m), the exact objective-equivalent conversion.

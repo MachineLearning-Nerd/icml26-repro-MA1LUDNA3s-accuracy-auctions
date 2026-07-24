@@ -1,0 +1,3 @@
+reader,baseline_welfare,endpoint_welfare,baseline_accuracy,endpoint_accuracy,welfare_gain_percent,accuracy_change_percent,accuracy_change_points
+A,0.75,0.925,0.732,0.56,23.33333333333334,-23.497267759562835,-17.199999999999992
+B,0.749,0.922,0.731,0.566,23.09746328437918,-22.571819425444605,-16.500000000000004
