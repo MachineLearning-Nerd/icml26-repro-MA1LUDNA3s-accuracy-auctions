@@ -1,0 +1,7 @@
+{
+  "checks": 441,
+  "denominator": 20,
+  "mismatches": [],
+  "passed": true,
+  "route": "independent_binary_stieltjes_integral_identity"
+}

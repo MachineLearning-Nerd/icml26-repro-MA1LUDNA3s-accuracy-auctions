@@ -1,0 +1,8 @@
+{
+  "claim_id": 2,
+  "outside_candidate_payers": 0,
+  "passed": true,
+  "payer_count_tail_loglog_exponent": 0.008098745990418384,
+  "payment_tail_loglog_exponent": 0.07303185622288984,
+  "verdict": "VERIFIED"
+}

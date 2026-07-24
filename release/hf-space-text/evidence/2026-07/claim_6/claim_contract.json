@@ -1,0 +1,12 @@
+{
+  "claim_id": 6,
+  "domain": "2018 1-Year NJ ACSIncome; random 30,000-person subset; 18,000/12,000 train/validation; stated 13 features; v(0)=1, v(1)=v_plus; L2 logistic regression.",
+  "falsification_rule": "FALSIFIED only if a counterexample satisfies every published and author-side implementation assumption and logically negates the existential claim, or if the published source's own endpoint arithmetic contradicts it.",
+  "paper_anchors": [
+    "S7.F3",
+    "Appendix C.1",
+    "Appendix C.2"
+  ],
+  "quantifier": "Existential/descriptive: at least one author experiment and frontier endpoint attains the reported approximate maximum.",
+  "statement": "The reported label-value experiment contains a frontier endpoint with approximately +23% normalized welfare and -21% accuracy relative to alpha=0."
+}

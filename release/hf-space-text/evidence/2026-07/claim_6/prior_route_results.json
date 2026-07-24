@@ -1,0 +1,20 @@
+[
+  {
+    "accuracy_change_percent": -20.485119861762154,
+    "route": "numeric_codes_three_preprocessing_sensitivities",
+    "run_id": "ec25262f-8c13-4376-ab19-5920ccc2a367",
+    "welfare_gain_percent": 19.52396117539906
+  },
+  {
+    "accuracy_change_percent": -20.61655476696979,
+    "route": "paper_mapped_14_group_preprocessing",
+    "run_id": "6f3dda99-13b6-4442-8bc5-3608031aca75",
+    "welfare_gain_percent": 19.910793814600915
+  },
+  {
+    "accuracy_change_percent": -20.845210792249144,
+    "route": "nested_regularization_selection",
+    "run_id": "1408cd20-8047-4343-8c03-95af617fb485",
+    "welfare_gain_percent": 19.653684010612427
+  }
+]

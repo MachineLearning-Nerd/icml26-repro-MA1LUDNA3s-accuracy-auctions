@@ -1,0 +1,8 @@
+{
+  "claim_id": 1,
+  "independent_comparisons": 206325,
+  "negative_control_witnesses": 12,
+  "passed": true,
+  "primary_antecedent_cases": 24543,
+  "verdict": "VERIFIED"
+}

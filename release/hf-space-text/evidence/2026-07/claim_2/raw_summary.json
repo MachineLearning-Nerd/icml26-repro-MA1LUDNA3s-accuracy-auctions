@@ -1,0 +1,106 @@
+{
+  "dimension": 4,
+  "fixed_lambda": 0.05,
+  "m_values": [
+    250,
+    500,
+    1000,
+    2000,
+    4000,
+    8000,
+    16000
+  ],
+  "optimizer_all_converged": true,
+  "outside_candidate_payers": 0,
+  "passed": true,
+  "payer_count_tail_loglog_exponent": 0.008098745990418384,
+  "payment_tail_loglog_exponent": 0.07303185622288984,
+  "sample_size_growth": 64.0,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "summaries": [
+    {
+      "m": 250,
+      "mean_payer_count": 2.55,
+      "mean_total_payment": 0.8208263788367993,
+      "payer_ci99_high": 3.2830800617194926,
+      "payer_ci99_low": 1.8169199382805072,
+      "payment_ci99_high": 1.152402557916161,
+      "payment_ci99_low": 0.4892501997574377
+    },
+    {
+      "m": 500,
+      "mean_payer_count": 2.9,
+      "mean_total_payment": 0.9617443695086829,
+      "payer_ci99_high": 3.753246435982712,
+      "payer_ci99_low": 2.046753564017288,
+      "payment_ci99_high": 1.40466149302424,
+      "payment_ci99_low": 0.5188272459931258
+    },
+    {
+      "m": 1000,
+      "mean_payer_count": 1.8,
+      "mean_total_payment": 0.5004040299487451,
+      "payer_ci99_high": 2.6197726592080928,
+      "payer_ci99_low": 0.9802273407919072,
+      "payment_ci99_high": 0.7970475166867097,
+      "payment_ci99_low": 0.20376054321078058
+    },
+    {
+      "m": 2000,
+      "mean_payer_count": 2.1,
+      "mean_total_payment": 0.63443040629518,
+      "payer_ci99_high": 2.9276175523942056,
+      "payer_ci99_low": 1.2723824476057946,
+      "payment_ci99_high": 0.9703373167804943,
+      "payment_ci99_low": 0.29852349580986565
+    },
+    {
+      "m": 4000,
+      "mean_payer_count": 2.2,
+      "mean_total_payment": 0.8105281739532032,
+      "payer_ci99_high": 2.9654213727174454,
+      "payer_ci99_low": 1.434578627282555,
+      "payment_ci99_high": 1.1588517369014006,
+      "payment_ci99_low": 0.4622046110050058
+    },
+    {
+      "m": 8000,
+      "mean_payer_count": 2.35,
+      "mean_total_payment": 0.9242098766460183,
+      "payer_ci99_high": 3.3726116825208425,
+      "payer_ci99_low": 1.3273883174791574,
+      "payment_ci99_high": 1.369081947824591,
+      "payment_ci99_low": 0.4793378054674456
+    },
+    {
+      "m": 16000,
+      "mean_payer_count": 1.75,
+      "mean_total_payment": 0.5340124561602397,
+      "payer_ci99_high": 2.764151461189905,
+      "payer_ci99_low": 0.7358485388100953,
+      "payment_ci99_high": 0.927250095577423,
+      "payment_ci99_low": 0.14077481674305653
+    }
+  ]
+}

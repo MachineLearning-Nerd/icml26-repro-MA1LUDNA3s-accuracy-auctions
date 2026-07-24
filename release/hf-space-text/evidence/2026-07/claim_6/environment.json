@@ -1,0 +1,10 @@
+{
+  "backend": "hf",
+  "command": "uv run --frozen python repro/src/verify_auctions.py",
+  "formal_run_id": "aeccb3f2-f952-4438-908c-e0886bf4dcd1",
+  "git_sha": "2088d5ee05a98759c47c6d13665ee158a8004575",
+  "image": "ghcr.io/astral-sh/uv:python3.12-bookworm-slim",
+  "logical_cpu_flavor": "cpu-upgrade",
+  "pinned_environment": "uv.lock",
+  "run_duration": "12m43s"
+}

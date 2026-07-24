@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "reader_agreement": true,
+  "readers": [
+    {
+      "accuracy_change_percent": -23.497267759562835,
+      "matches_textual_band": true,
+      "reader": "A",
+      "welfare_gain_percent": 23.33333333333334
+    },
+    {
+      "accuracy_change_percent": -22.571819425444605,
+      "matches_textual_band": true,
+      "reader": "B",
+      "welfare_gain_percent": 23.09746328437918
+    }
+  ],
+  "route": "independent_ratio_recalculation_from_two_figure_readers"
+}

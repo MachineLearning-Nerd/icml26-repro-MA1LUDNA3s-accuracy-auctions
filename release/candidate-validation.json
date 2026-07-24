@@ -1,0 +1,46 @@
+{
+  "candidate_logbook": {
+    "all_declared_page_files_exist": true,
+    "child_claim_page_count": 6,
+    "json_valid": true,
+    "root_child_count": 6,
+    "space_id": "DineshAI/MA1LUDNA3s"
+  },
+  "figures": {
+    "all_report_links_resolve": true,
+    "count": 5,
+    "format": "PNG"
+  },
+  "formal_cumulative_run": {
+    "claim_1_and_4_stage": "PASS",
+    "claim_2_and_3_stage": "PASS",
+    "claim_5_stage": "PASS",
+    "claim_6_stage": "BLOCKED",
+    "commit": "68373bc5788c0a592bfc4b87ac9dd5637d46cf73",
+    "duration_seconds": 773,
+    "expected_nonzero_exit_due_to_blocked_claim": true,
+    "run_id": "e721fc26-ae7f-4134-a468-ca64e2ce2782"
+  },
+  "hf_upload": {
+    "allowlisted_file_count": 85,
+    "manifest_row_count": 85,
+    "text_only": true
+  },
+  "notebook": {
+    "byte_compile_passed": true,
+    "exported_html_bytes": 148331,
+    "marimo_check_available_in_pinned_0_15_5": false,
+    "marimo_export_completed_without_failed_cells": true
+  },
+  "published_space": {
+    "actual_repository_file_count": 100,
+    "all_85_upload_hashes_verified": true,
+    "all_17_judged_hub_paths_retained": true,
+    "revision": "1d9f5ffa9259a22f633cc426250fc3f190158186",
+    "space_id": "DineshAI/MA1LUDNA3s"
+  },
+  "secret_scan": {
+    "candidate_files_matching_common_secret_patterns": 0,
+    "passed": true
+  }
+}

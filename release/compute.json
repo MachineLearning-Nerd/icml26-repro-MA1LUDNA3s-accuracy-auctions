@@ -1,0 +1,49 @@
+{
+  "gpu_used": false,
+  "hugging_face": {
+    "backend": "hf",
+    "cost_basis_url": "https://huggingface.co/docs/hub/en/jobs-pricing",
+    "cpu_upgrade_price_usd_per_hour": 0.03,
+    "duration_seconds_all_runs": 3943,
+    "estimated_cost_usd_from_observed_duration": 0.03286,
+    "runs_included": [
+      {
+        "duration_seconds": 11,
+        "note": "environment-image failure before scientific execution",
+        "run_id": "78186811-eb1c-44bd-adfa-0624f59348a6"
+      },
+      {
+        "duration_seconds": 761,
+        "note": "Claim 6 route 1",
+        "run_id": "ec25262f-8c13-4376-ab19-5920ccc2a367"
+      },
+      {
+        "duration_seconds": 809,
+        "note": "Claim 6 route 2",
+        "run_id": "6f3dda99-13b6-4442-8bc5-3608031aca75"
+      },
+      {
+        "duration_seconds": 826,
+        "note": "Claim 6 route 3",
+        "run_id": "1408cd20-8047-4343-8c03-95af617fb485"
+      },
+      {
+        "duration_seconds": 763,
+        "note": "Claim 6 route 4",
+        "run_id": "aeccb3f2-f952-4438-908c-e0886bf4dcd1"
+      },
+      {
+        "duration_seconds": 773,
+        "note": "cumulative release regression; Claims 1-5 pass and Claim 6 exits nonzero as BLOCKED",
+        "run_id": "e721fc26-ae7f-4134-a468-ca64e2ce2782"
+      }
+    ],
+    "billing_note": "Estimate uses observed orx durations. Hugging Face also bills Starting time, so the invoice may differ."
+  },
+  "local": {
+    "duration_seconds_all_formal_runs": 2093,
+    "estimated_cost_usd": 0,
+    "hardware": "8 logical CPU Apple arm64",
+    "note": "Includes accepted runs, one failed asymptotic variant, and one cancelled overloaded Claim 6 run."
+  }
+}

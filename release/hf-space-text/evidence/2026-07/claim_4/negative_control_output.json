@@ -1,0 +1,12 @@
+{
+  "control": "critical_payment_plus_one",
+  "control_failed_as_intended": true,
+  "expected_to_fail_ir": true,
+  "first_witness": {
+    "bad_payment": 2,
+    "threshold": 1,
+    "utility": -1,
+    "value": 1
+  },
+  "violation_count": 12
+}

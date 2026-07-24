@@ -1,0 +1,8 @@
+{
+  "cases": 182,
+  "dsic_violations": [],
+  "ir_violations": [],
+  "passed": true,
+  "payment_violations": [],
+  "route": "all_monotone_binary_thresholds_values_and_reports"
+}

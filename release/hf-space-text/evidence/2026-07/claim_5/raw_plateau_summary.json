@@ -1,0 +1,298 @@
+{
+  "all_sigma_plateau": true,
+  "m_values": [
+    4096,
+    8192,
+    16384,
+    32768,
+    65536
+  ],
+  "sample_size_growth": 16.0,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "settings": [
+    {
+      "passed": true,
+      "per_m": [
+        {
+          "m": 4096,
+          "mean_payers": 0.8,
+          "payer_ci99_high": 1.610651410666578,
+          "payer_ci99_low": -0.010651410666577932
+        },
+        {
+          "m": 8192,
+          "mean_payers": 0.8,
+          "payer_ci99_high": 1.610651410666578,
+          "payer_ci99_low": -0.010651410666577932
+        },
+        {
+          "m": 16384,
+          "mean_payers": 0.9,
+          "payer_ci99_high": 1.4833633329185605,
+          "payer_ci99_low": 0.31663666708143967
+        },
+        {
+          "m": 32768,
+          "mean_payers": 1.0,
+          "payer_ci99_high": 2.083278513864042,
+          "payer_ci99_low": -0.08327851386404173
+        },
+        {
+          "m": 65536,
+          "mean_payers": 0.6,
+          "payer_ci99_high": 1.130695921657475,
+          "payer_ci99_low": 0.06930407834252494
+        }
+      ],
+      "seed_log1p_slope_ci99_high": 0.20896583206215844,
+      "seed_log1p_slope_ci99_low": -0.23576283211985097,
+      "seed_log1p_slope_mean": -0.013398500028846263,
+      "sigma": 0.1
+    },
+    {
+      "passed": true,
+      "per_m": [
+        {
+          "m": 4096,
+          "mean_payers": 6.2,
+          "payer_ci99_high": 9.406211609693207,
+          "payer_ci99_low": 2.9937883903067934
+        },
+        {
+          "m": 8192,
+          "mean_payers": 6.2,
+          "payer_ci99_high": 8.355697024364503,
+          "payer_ci99_low": 4.044302975635498
+        },
+        {
+          "m": 16384,
+          "mean_payers": 6.4,
+          "payer_ci99_high": 9.017860817045285,
+          "payer_ci99_low": 3.7821391829547157
+        },
+        {
+          "m": 32768,
+          "mean_payers": 5.4,
+          "payer_ci99_high": 7.577362865473261,
+          "payer_ci99_low": 3.2226371345267397
+        },
+        {
+          "m": 65536,
+          "mean_payers": 5.8,
+          "payer_ci99_high": 8.009463312339417,
+          "payer_ci99_low": 3.590536687660583
+        }
+      ],
+      "seed_log1p_slope_ci99_high": 0.2108984720365951,
+      "seed_log1p_slope_ci99_low": -0.27274864016973366,
+      "seed_log1p_slope_mean": -0.030925084066569297,
+      "sigma": 0.2
+    },
+    {
+      "passed": true,
+      "per_m": [
+        {
+          "m": 4096,
+          "mean_payers": 14.1,
+          "payer_ci99_high": 16.859703838731733,
+          "payer_ci99_low": 11.340296161268265
+        },
+        {
+          "m": 8192,
+          "mean_payers": 13.8,
+          "payer_ci99_high": 17.252923711895587,
+          "payer_ci99_low": 10.347076288104414
+        },
+        {
+          "m": 16384,
+          "mean_payers": 13.0,
+          "payer_ci99_high": 16.063974332267797,
+          "payer_ci99_low": 9.936025667732203
+        },
+        {
+          "m": 32768,
+          "mean_payers": 13.1,
+          "payer_ci99_high": 16.73988028687596,
+          "payer_ci99_low": 9.460119713124042
+        },
+        {
+          "m": 65536,
+          "mean_payers": 15.0,
+          "payer_ci99_high": 18.72118389702443,
+          "payer_ci99_low": 11.278816102975568
+        }
+      ],
+      "seed_log1p_slope_ci99_high": 0.1327095217046116,
+      "seed_log1p_slope_ci99_low": -0.12269227387606285,
+      "seed_log1p_slope_mean": 0.00500862391427437,
+      "sigma": 0.5
+    },
+    {
+      "passed": true,
+      "per_m": [
+        {
+          "m": 4096,
+          "mean_payers": 25.7,
+          "payer_ci99_high": 30.7124316423683,
+          "payer_ci99_low": 20.687568357631697
+        },
+        {
+          "m": 8192,
+          "mean_payers": 24.9,
+          "payer_ci99_high": 29.378279141217664,
+          "payer_ci99_low": 20.421720858782333
+        },
+        {
+          "m": 16384,
+          "mean_payers": 23.5,
+          "payer_ci99_high": 29.45803182625223,
+          "payer_ci99_low": 17.54196817374777
+        },
+        {
+          "m": 32768,
+          "mean_payers": 23.9,
+          "payer_ci99_high": 28.218193286589408,
+          "payer_ci99_low": 19.58180671341059
+        },
+        {
+          "m": 65536,
+          "mean_payers": 23.5,
+          "payer_ci99_high": 28.790348974840672,
+          "payer_ci99_low": 18.209651025159328
+        }
+      ],
+      "seed_log1p_slope_ci99_high": 0.03799400769992168,
+      "seed_log1p_slope_ci99_low": -0.1006959295930551,
+      "seed_log1p_slope_mean": -0.031350960946566704,
+      "sigma": 1.0
+    },
+    {
+      "passed": true,
+      "per_m": [
+        {
+          "m": 4096,
+          "mean_payers": 33.2,
+          "payer_ci99_high": 40.333205997423164,
+          "payer_ci99_low": 26.06679400257684
+        },
+        {
+          "m": 8192,
+          "mean_payers": 36.8,
+          "payer_ci99_high": 39.96939969369778,
+          "payer_ci99_low": 33.63060030630221
+        },
+        {
+          "m": 16384,
+          "mean_payers": 36.1,
+          "payer_ci99_high": 42.715098586292946,
+          "payer_ci99_low": 29.48490141370706
+        },
+        {
+          "m": 32768,
+          "mean_payers": 36.0,
+          "payer_ci99_high": 41.284800626198475,
+          "payer_ci99_low": 30.715199373801525
+        },
+        {
+          "m": 65536,
+          "mean_payers": 37.3,
+          "payer_ci99_high": 43.371193816327214,
+          "payer_ci99_low": 31.228806183672777
+        }
+      ],
+      "seed_log1p_slope_ci99_high": 0.09262620624744065,
+      "seed_log1p_slope_ci99_low": -0.03181216343523065,
+      "seed_log1p_slope_mean": 0.030407021406105007,
+      "sigma": 1.5
+    },
+    {
+      "passed": true,
+      "per_m": [
+        {
+          "m": 4096,
+          "mean_payers": 42.2,
+          "payer_ci99_high": 49.8107543537596,
+          "payer_ci99_low": 34.58924564624041
+        },
+        {
+          "m": 8192,
+          "mean_payers": 48.5,
+          "payer_ci99_high": 59.86410277421291,
+          "payer_ci99_low": 37.13589722578709
+        },
+        {
+          "m": 16384,
+          "mean_payers": 45.2,
+          "payer_ci99_high": 54.66614361688311,
+          "payer_ci99_low": 35.733856383116894
+        },
+        {
+          "m": 32768,
+          "mean_payers": 47.3,
+          "payer_ci99_high": 54.71155694640755,
+          "payer_ci99_low": 39.88844305359245
+        },
+        {
+          "m": 65536,
+          "mean_payers": 51.2,
+          "payer_ci99_high": 59.390044082564316,
+          "payer_ci99_low": 43.00995591743569
+        }
+      ],
+      "seed_log1p_slope_ci99_high": 0.1120654800382099,
+      "seed_log1p_slope_ci99_low": -0.004597595952922341,
+      "seed_log1p_slope_mean": 0.05373394204264378,
+      "sigma": 2.0
+    },
+    {
+      "passed": true,
+      "per_m": [
+        {
+          "m": 4096,
+          "mean_payers": 50.3,
+          "payer_ci99_high": 57.85271226641933,
+          "payer_ci99_low": 42.74728773358066
+        },
+        {
+          "m": 8192,
+          "mean_payers": 60.5,
+          "payer_ci99_high": 72.55558070503227,
+          "payer_ci99_low": 48.44441929496773
+        },
+        {
+          "m": 16384,
+          "mean_payers": 57.2,
+          "payer_ci99_high": 67.9545062598134,
+          "payer_ci99_low": 46.44549374018661
+        },
+        {
+          "m": 32768,
+          "mean_payers": 59.0,
+          "payer_ci99_high": 71.10172896148381,
+          "payer_ci99_low": 46.89827103851619
+        },
+        {
+          "m": 65536,
+          "mean_payers": 53.2,
+          "payer_ci99_high": 59.7857631930276,
+          "payer_ci99_low": 46.61423680697241
+        }
+      ],
+      "seed_log1p_slope_ci99_high": 0.06640769518580951,
+      "seed_log1p_slope_ci99_low": -0.04038198515780504,
+      "seed_log1p_slope_mean": 0.013012855014002234,
+      "sigma": 2.5
+    }
+  ]
+}

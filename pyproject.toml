@@ -1,0 +1,17 @@
+[project]
+name = "accuracy-auctions-reproduction"
+version = "0.1.0"
+description = "Claim-by-claim CPU reproduction of Welfare-Optimal Classification with Accuracy Auctions"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "folktables==0.0.12",
+  "marimo==0.15.5",
+  "matplotlib==3.10.3",
+  "numpy==2.2.6",
+  "pandas==2.3.1",
+  "scikit-learn==1.7.1",
+  "scipy==1.16.0",
+]
+
+[tool.uv]
+package = false

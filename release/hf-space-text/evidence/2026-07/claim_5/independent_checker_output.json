@@ -1,0 +1,70 @@
+{
+  "all_optimizers_converged": true,
+  "datasets": 6,
+  "passed": true,
+  "positive_payers_outside_stability_band": 0,
+  "route": "all_user_zero_bid_refits_without_candidate_prescreen",
+  "rows": [
+    {
+      "candidate_count": 2,
+      "optimizer_converged": true,
+      "outside_candidate_payers": [],
+      "payer_count": 2,
+      "payer_fraction": 0.0078125,
+      "seed": 0,
+      "sigma": 0.2,
+      "training_accuracy": 0.8984375
+    },
+    {
+      "candidate_count": 7,
+      "optimizer_converged": true,
+      "outside_candidate_payers": [],
+      "payer_count": 7,
+      "payer_fraction": 0.02734375,
+      "seed": 1,
+      "sigma": 0.2,
+      "training_accuracy": 0.921875
+    },
+    {
+      "candidate_count": 18,
+      "optimizer_converged": true,
+      "outside_candidate_payers": [],
+      "payer_count": 18,
+      "payer_fraction": 0.0703125,
+      "seed": 0,
+      "sigma": 1.0,
+      "training_accuracy": 0.609375
+    },
+    {
+      "candidate_count": 14,
+      "optimizer_converged": true,
+      "outside_candidate_payers": [],
+      "payer_count": 14,
+      "payer_fraction": 0.0546875,
+      "seed": 1,
+      "sigma": 1.0,
+      "training_accuracy": 0.63671875
+    },
+    {
+      "candidate_count": 36,
+      "optimizer_converged": true,
+      "outside_candidate_payers": [],
+      "payer_count": 23,
+      "payer_fraction": 0.08984375,
+      "seed": 0,
+      "sigma": 2.5,
+      "training_accuracy": 0.55859375
+    },
+    {
+      "candidate_count": 36,
+      "optimizer_converged": true,
+      "outside_candidate_payers": [],
+      "payer_count": 30,
+      "payer_fraction": 0.1171875,
+      "seed": 1,
+      "sigma": 2.5,
+      "training_accuracy": 0.5859375
+    }
+  ],
+  "users_checked": 1536
+}

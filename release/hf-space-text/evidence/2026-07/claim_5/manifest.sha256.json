@@ -1,0 +1,16 @@
+{
+  "EVAL.md": "76e6b8bb0ae8d75ab31605d47a877235beabbde34d560e46cf6ae74116a135b5",
+  "claim_contract.json": "f0ad772829951ee122e701f30fb91f30a810f5cbf90c76bb59f8372bb86defc7",
+  "command.txt": "5b88f35357f915f36e35f7ce13a6d85fa9f3b9e2fb5bbcd3ed67e32979195db4",
+  "environment.json": "4eaa6fbbb74a6765908c49f6539bdb1d4b005d0e5cb68946fa6e820dd0eaff87",
+  "independent_checker_output.json": "05885b24157373f22d51159f619a8c01a11a5e162a951a4ec943c0c19e9c33bf",
+  "limitations.md": "5ccf277db405754dd91b59b2b1575512beaec1909f8e22c39635d453e4caf9e6",
+  "method.md": "c850014589bd8023c9fe435802db78049e5a9ddd7d2ed8e03f3c8cf7aa76d89d",
+  "negative_control_output.json": "292f494c49b68f8fd40c89794a80dac9f0a6459ba7824716ac8b2800109548c4",
+  "raw_accuracy_association.csv": "aa2a224f3e343683318f545ff80df585e20d95195fce96c32124853725f7d1ff",
+  "raw_accuracy_summary.json": "c9a07a89390f3337574406a8a1eeaed3a8e529532c90656e87534bbabbb4d121",
+  "raw_plateau.csv": "d83de06895677738da422b24aa0ad8eed7d4eafdd22b9cb8157356aaec3ca10d",
+  "raw_plateau_summary.json": "924083b4b5b82789210fa9825f6f3ef90298ece57867c798a91585592c54c6de",
+  "source_audit.md": "9e425f08e2d1b0f7c6a62e06a398ec5509e5c0f21dd73bbe456564287f8b745e",
+  "verifier_output.json": "4d82fa7b1617ec026e1054a92d63f44645bdc5e101ba3ffaad5765f0b726287c"
+}

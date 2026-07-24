@@ -1,0 +1,7 @@
+{
+  "datasets": 3,
+  "passed": true,
+  "positive_payers_outside_stability_band": 0,
+  "route": "all_users_leave_one_weight_out_at_m250",
+  "users_checked": 750
+}

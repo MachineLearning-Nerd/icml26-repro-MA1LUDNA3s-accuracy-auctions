@@ -1,0 +1,32 @@
+{
+  "paper": {
+    "arxiv_id": "2606.02435",
+    "retrieved_at_utc": "2026-07-23T15:55:59Z",
+    "primary_url": "https://ar5iv.labs.arxiv.org/html/2606.02435",
+    "user_agent": "Mozilla/5.0 (compatible; OpenResearch-Reproduction/1.0; +https://openresearch.ai)",
+    "sha256": "abdd0eb6dbcb4bc119c71405ea5e0d944ec598efef39c8c8da776f545916654d",
+    "anchors": [
+      "Thmtheorem1",
+      "Thmcorollary1",
+      "Thmtheorem2",
+      "Thmtheorem3",
+      "Thmtheorem4",
+      "Thmtheorem6",
+      "S7.F2",
+      "S7.F3",
+      "S7.SS1",
+      "S7.SS2"
+    ],
+    "official_code_url": "https://github.com/BML-Technion/accuracy_auctions",
+    "official_code_sha": "0bffe47c4907587bf1808fd3fec02dcf6f2864ec"
+  },
+  "judge": {
+    "dataset": "ICML-2026-agent-repro/verdicts",
+    "dataset_revision": "d662bb4753c8fadbfde58ddea3942cd6ec2cc96d",
+    "dataset_file_sha256": "29c14cac11759158f1413911059a117395e3d6626cfa233e4cbf7bd5bda1ee90",
+    "selection": "space_id == DineshAI/MA1LUDNA3s",
+    "space_revision": "c55042270cb78121f72a1a0ce1fffe8ef25bbaaa",
+    "judged_at": "2026-07-22T00:40:27+00:00",
+    "score": "5/12"
+  }
+}

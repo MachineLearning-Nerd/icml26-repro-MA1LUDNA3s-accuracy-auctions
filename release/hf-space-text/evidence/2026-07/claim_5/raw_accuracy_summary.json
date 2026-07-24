@@ -1,0 +1,631 @@
+{
+  "all_dimensions_negative": true,
+  "dimensions": [
+    {
+      "accuracy_payment_spearman_ci99_high": -0.6019125460515188,
+      "accuracy_payment_spearman_ci99_low": -0.7948793285005601,
+      "accuracy_payment_spearman_mean": -0.6983959372760394,
+      "dimension": 2,
+      "passed": true,
+      "per_mu": [
+        {
+          "accuracy_ci99_high": 0.504421046730788,
+          "accuracy_ci99_low": 0.49345895326921196,
+          "mean_payer_fraction": 0.0378,
+          "mean_shuffled_accuracy": 0.50222,
+          "mean_test_accuracy": 0.49894,
+          "mu": 0.0,
+          "payer_fraction_ci99_high": 0.06796809105867022,
+          "payer_fraction_ci99_low": 0.007631908941329781
+        },
+        {
+          "accuracy_ci99_high": 0.6987776989633878,
+          "accuracy_ci99_low": 0.6843823010366121,
+          "mean_payer_fraction": 0.003,
+          "mean_shuffled_accuracy": 0.5024200000000001,
+          "mean_test_accuracy": 0.69158,
+          "mu": 0.5,
+          "payer_fraction_ci99_high": 0.006102037584639456,
+          "payer_fraction_ci99_low": -0.00010203758463945634
+        },
+        {
+          "accuracy_ci99_high": 0.8468348096175773,
+          "accuracy_ci99_low": 0.8378451903824229,
+          "mean_payer_fraction": 0.0006000000000000001,
+          "mean_shuffled_accuracy": 0.5010199999999999,
+          "mean_test_accuracy": 0.8423400000000001,
+          "mu": 1.0,
+          "payer_fraction_ci99_high": 0.0015928411577002483,
+          "payer_fraction_ci99_low": -0.00039284115770024815
+        },
+        {
+          "accuracy_ci99_high": 0.9362303028894992,
+          "accuracy_ci99_low": 0.9281296971105009,
+          "mean_payer_fraction": 0.0,
+          "mean_shuffled_accuracy": 0.50126,
+          "mean_test_accuracy": 0.93218,
+          "mu": 1.5,
+          "payer_fraction_ci99_high": 0.0,
+          "payer_fraction_ci99_low": 0.0
+        },
+        {
+          "accuracy_ci99_high": 0.9779097050796612,
+          "accuracy_ci99_low": 0.9756102949203391,
+          "mean_payer_fraction": 0.0,
+          "mean_shuffled_accuracy": 0.50324,
+          "mean_test_accuracy": 0.9767600000000002,
+          "mu": 2.0,
+          "payer_fraction_ci99_high": 0.0,
+          "payer_fraction_ci99_low": 0.0
+        },
+        {
+          "accuracy_ci99_high": 0.9989963400978785,
+          "accuracy_ci99_low": 0.9983236599021212,
+          "mean_payer_fraction": 0.0,
+          "mean_shuffled_accuracy": 0.49845999999999996,
+          "mean_test_accuracy": 0.9986599999999999,
+          "mu": 3.0,
+          "payer_fraction_ci99_high": 0.0,
+          "payer_fraction_ci99_low": 0.0
+        },
+        {
+          "accuracy_ci99_high": 1.0,
+          "accuracy_ci99_low": 1.0,
+          "mean_payer_fraction": 0.0,
+          "mean_shuffled_accuracy": 0.50088,
+          "mean_test_accuracy": 1.0,
+          "mu": 4.0,
+          "payer_fraction_ci99_high": 0.0,
+          "payer_fraction_ci99_low": 0.0
+        },
+        {
+          "accuracy_ci99_high": 1.0,
+          "accuracy_ci99_low": 1.0,
+          "mean_payer_fraction": 0.0,
+          "mean_shuffled_accuracy": 0.4993600000000001,
+          "mean_test_accuracy": 1.0,
+          "mu": 5.0,
+          "payer_fraction_ci99_high": 0.0,
+          "payer_fraction_ci99_low": 0.0
+        },
+        {
+          "accuracy_ci99_high": 1.0,
+          "accuracy_ci99_low": 1.0,
+          "mean_payer_fraction": 0.0,
+          "mean_shuffled_accuracy": 0.50056,
+          "mean_test_accuracy": 1.0,
+          "mu": 6.0,
+          "payer_fraction_ci99_high": 0.0,
+          "payer_fraction_ci99_low": 0.0
+        }
+      ],
+      "shuffled_accuracy_spearman_ci99_high": 0.4301032970238322,
+      "shuffled_accuracy_spearman_ci99_low": -0.159686307239531,
+      "shuffled_accuracy_spearman_mean": 0.13520849489215062
+    },
+    {
+      "accuracy_payment_spearman_ci99_high": -0.7857647156017895,
+      "accuracy_payment_spearman_ci99_low": -0.9125434391752376,
+      "accuracy_payment_spearman_mean": -0.8491540773885136,
+      "dimension": 4,
+      "passed": true,
+      "per_mu": [
+        {
+          "accuracy_ci99_high": 0.5097845422801237,
+          "accuracy_ci99_low": 0.4985354577198761,
+          "mean_payer_fraction": 0.0442,
+          "mean_shuffled_accuracy": 0.4997599999999999,
+          "mean_test_accuracy": 0.5041599999999999,
+          "mu": 0.0,
+          "payer_fraction_ci99_high": 0.06717878614453394,
+          "payer_fraction_ci99_low": 0.021221213855466062
+        },
+        {
+          "accuracy_ci99_high": 0.7005916622873116,
+          "accuracy_ci99_low": 0.6841283377126886,
+          "mean_payer_fraction": 0.004600000000000001,
+          "mean_shuffled_accuracy": 0.49587999999999993,
+          "mean_test_accuracy": 0.6923600000000001,
+          "mu": 0.5,
+          "payer_fraction_ci99_high": 0.006983212730500893,
+          "payer_fraction_ci99_low": 0.002216787269499109
+        },
+        {
+          "accuracy_ci99_high": 0.8455818266740696,
+          "accuracy_ci99_low": 0.8349781733259303,
+          "mean_payer_fraction": 0.0024000000000000002,
+          "mean_shuffled_accuracy": 0.5008800000000001,
+          "mean_test_accuracy": 0.8402799999999999,
+          "mu": 1.0,
+          "payer_fraction_ci99_high": 0.004733453331674242,
+          "payer_fraction_ci99_low": 6.654666832575824e-05
+        },
+        {
+          "accuracy_ci99_high": 0.9350933988804088,
+          "accuracy_ci99_low": 0.9314266011195912,
+          "mean_payer_fraction": 0.0014,
+          "mean_shuffled_accuracy": 0.50194,
+          "mean_test_accuracy": 0.93326,
+          "mu": 1.5,
+          "payer_fraction_ci99_high": 0.0027872733816026165,
+          "payer_fraction_ci99_low": 1.2726618397383661e-05
+        },
+        {
+          "accuracy_ci99_high": 0.9786869628743547,
+          "accuracy_ci99_low": 0.9737930371256455,
+          "mean_payer_fraction": 0.0002,
+          "mean_shuffled_accuracy": 0.4946,
+          "mean_test_accuracy": 0.9762400000000001,
+          "mu": 2.0,
+          "payer_fraction_ci99_high": 0.000849967108318425,
+          "payer_fraction_ci99_low": -0.000449967108318425
+        },
+        {
+          "accuracy_ci99_high": 0.9990664310321399,
+          "accuracy_ci99_low": 0.9978135689678603,
+          "mean_payer_fraction": 0.0,
+          "mean_shuffled_accuracy": 0.49924,
+          "mean_test_accuracy": 0.9984400000000001,
+          "mu": 3.0,
+          "payer_fraction_ci99_high": 0.0,
+          "payer_fraction_ci99_low": 0.0
+        },
+        {
+          "accuracy_ci99_high": 1.000044996710832,
+          "accuracy_ci99_low": 0.9999150032891683,
+          "mean_payer_fraction": 0.0,
+          "mean_shuffled_accuracy": 0.4998199999999999,
+          "mean_test_accuracy": 0.9999800000000001,
+          "mu": 4.0,
+          "payer_fraction_ci99_high": 0.0,
+          "payer_fraction_ci99_low": 0.0
+        },
+        {
+          "accuracy_ci99_high": 1.0,
+          "accuracy_ci99_low": 1.0,
+          "mean_payer_fraction": 0.0,
+          "mean_shuffled_accuracy": 0.49763999999999997,
+          "mean_test_accuracy": 1.0,
+          "mu": 5.0,
+          "payer_fraction_ci99_high": 0.0,
+          "payer_fraction_ci99_low": 0.0
+        },
+        {
+          "accuracy_ci99_high": 1.0,
+          "accuracy_ci99_low": 1.0,
+          "mean_payer_fraction": 0.0,
+          "mean_shuffled_accuracy": 0.50216,
+          "mean_test_accuracy": 1.0,
+          "mu": 6.0,
+          "payer_fraction_ci99_high": 0.0,
+          "payer_fraction_ci99_low": 0.0
+        }
+      ],
+      "shuffled_accuracy_spearman_ci99_high": 0.36035188938320334,
+      "shuffled_accuracy_spearman_ci99_low": -0.36094320735857605,
+      "shuffled_accuracy_spearman_mean": -0.0002956589876863702
+    },
+    {
+      "accuracy_payment_spearman_ci99_high": -0.7913294487644269,
+      "accuracy_payment_spearman_ci99_low": -0.9280782599401021,
+      "accuracy_payment_spearman_mean": -0.8597038543522645,
+      "dimension": 8,
+      "passed": true,
+      "per_mu": [
+        {
+          "accuracy_ci99_high": 0.5112129003068039,
+          "accuracy_ci99_low": 0.49170709969319615,
+          "mean_payer_fraction": 0.056600000000000004,
+          "mean_shuffled_accuracy": 0.5004600000000001,
+          "mean_test_accuracy": 0.50146,
+          "mu": 0.0,
+          "payer_fraction_ci99_high": 0.07295858162843671,
+          "payer_fraction_ci99_low": 0.040241418371563295
+        },
+        {
+          "accuracy_ci99_high": 0.6938054846613364,
+          "accuracy_ci99_low": 0.6822745153386638,
+          "mean_payer_fraction": 0.011,
+          "mean_shuffled_accuracy": 0.5001599999999999,
+          "mean_test_accuracy": 0.6880400000000001,
+          "mu": 0.5,
+          "payer_fraction_ci99_high": 0.016752606709006405,
+          "payer_fraction_ci99_low": 0.005247393290993592
+        },
+        {
+          "accuracy_ci99_high": 0.8475741396293313,
+          "accuracy_ci99_low": 0.8339058603706688,
+          "mean_payer_fraction": 0.004000000000000001,
+          "mean_shuffled_accuracy": 0.4989,
+          "mean_test_accuracy": 0.84074,
+          "mu": 1.0,
+          "payer_fraction_ci99_high": 0.008844568791129891,
+          "payer_fraction_ci99_low": -0.0008445687911298903
+        },
+        {
+          "accuracy_ci99_high": 0.937017582894341,
+          "accuracy_ci99_low": 0.931142417105659,
+          "mean_payer_fraction": 0.001,
+          "mean_shuffled_accuracy": 0.49971999999999994,
+          "mean_test_accuracy": 0.93408,
+          "mu": 1.5,
+          "payer_fraction_ci99_high": 0.0024533706373389675,
+          "payer_fraction_ci99_low": -0.00045337063733896744
+        },
+        {
+          "accuracy_ci99_high": 0.9789498262268216,
+          "accuracy_ci99_low": 0.9757301737731782,
+          "mean_payer_fraction": 0.0004,
+          "mean_shuffled_accuracy": 0.49813999999999997,
+          "mean_test_accuracy": 0.9773399999999999,
+          "mu": 2.0,
+          "payer_fraction_ci99_high": 0.0012666228110912335,
+          "payer_fraction_ci99_low": -0.0004666228110912335
+        },
+        {
+          "accuracy_ci99_high": 0.9989063974332268,
+          "accuracy_ci99_low": 0.9982936025667732,
+          "mean_payer_fraction": 0.0,
+          "mean_shuffled_accuracy": 0.5006,
+          "mean_test_accuracy": 0.9986,
+          "mu": 3.0,
+          "payer_fraction_ci99_high": 0.0,
+          "payer_fraction_ci99_low": 0.0
+        },
+        {
+          "accuracy_ci99_high": 1.000044996710832,
+          "accuracy_ci99_low": 0.9999150032891683,
+          "mean_payer_fraction": 0.0,
+          "mean_shuffled_accuracy": 0.49829999999999997,
+          "mean_test_accuracy": 0.9999800000000001,
+          "mu": 4.0,
+          "payer_fraction_ci99_high": 0.0,
+          "payer_fraction_ci99_low": 0.0
+        },
+        {
+          "accuracy_ci99_high": 1.0,
+          "accuracy_ci99_low": 1.0,
+          "mean_payer_fraction": 0.0,
+          "mean_shuffled_accuracy": 0.5009600000000001,
+          "mean_test_accuracy": 1.0,
+          "mu": 5.0,
+          "payer_fraction_ci99_high": 0.0,
+          "payer_fraction_ci99_low": 0.0
+        },
+        {
+          "accuracy_ci99_high": 1.0,
+          "accuracy_ci99_low": 1.0,
+          "mean_payer_fraction": 0.0,
+          "mean_shuffled_accuracy": 0.49544,
+          "mean_test_accuracy": 1.0,
+          "mu": 6.0,
+          "payer_fraction_ci99_high": 0.0,
+          "payer_fraction_ci99_low": 0.0
+        }
+      ],
+      "shuffled_accuracy_spearman_ci99_high": 0.44349195423927357,
+      "shuffled_accuracy_spearman_ci99_low": -0.16083501834626115,
+      "shuffled_accuracy_spearman_mean": 0.1413284679465062
+    },
+    {
+      "accuracy_payment_spearman_ci99_high": -0.8688258438734182,
+      "accuracy_payment_spearman_ci99_low": -0.96266958145045,
+      "accuracy_payment_spearman_mean": -0.9157477126619341,
+      "dimension": 16,
+      "passed": true,
+      "per_mu": [
+        {
+          "accuracy_ci99_high": 0.5038555725388422,
+          "accuracy_ci99_low": 0.4957444274611579,
+          "mean_payer_fraction": 0.07980000000000001,
+          "mean_shuffled_accuracy": 0.50112,
+          "mean_test_accuracy": 0.4998,
+          "mu": 0.0,
+          "payer_fraction_ci99_high": 0.09904336878949355,
+          "payer_fraction_ci99_low": 0.06055663121050647
+        },
+        {
+          "accuracy_ci99_high": 0.6911178525879837,
+          "accuracy_ci99_low": 0.6709221474120162,
+          "mean_payer_fraction": 0.0246,
+          "mean_shuffled_accuracy": 0.50046,
+          "mean_test_accuracy": 0.68102,
+          "mu": 0.5,
+          "payer_fraction_ci99_high": 0.03326893588417351,
+          "payer_fraction_ci99_low": 0.015931064115826492
+        },
+        {
+          "accuracy_ci99_high": 0.8415593634600717,
+          "accuracy_ci99_low": 0.8314006365399281,
+          "mean_payer_fraction": 0.0048000000000000004,
+          "mean_shuffled_accuracy": 0.49816000000000005,
+          "mean_test_accuracy": 0.8364799999999999,
+          "mu": 1.0,
+          "payer_fraction_ci99_high": 0.007212575801804672,
+          "payer_fraction_ci99_low": 0.0023874241981953286
+        },
+        {
+          "accuracy_ci99_high": 0.9328178552017966,
+          "accuracy_ci99_low": 0.9283421447982038,
+          "mean_payer_fraction": 0.0024000000000000002,
+          "mean_shuffled_accuracy": 0.5027800000000001,
+          "mean_test_accuracy": 0.9305800000000002,
+          "mu": 1.5,
+          "payer_fraction_ci99_high": 0.0045227836866299,
+          "payer_fraction_ci99_low": 0.0002772163133701001
+        },
+        {
+          "accuracy_ci99_high": 0.9787531307713864,
+          "accuracy_ci99_low": 0.9742868692286137,
+          "mean_payer_fraction": 0.0028,
+          "mean_shuffled_accuracy": 0.49872000000000005,
+          "mean_test_accuracy": 0.97652,
+          "mu": 2.0,
+          "payer_fraction_ci99_high": 0.004785682315400497,
+          "payer_fraction_ci99_low": 0.0008143176845995036
+        },
+        {
+          "accuracy_ci99_high": 0.9990782826928467,
+          "accuracy_ci99_low": 0.9979617173071534,
+          "mean_payer_fraction": 0.0,
+          "mean_shuffled_accuracy": 0.49739999999999995,
+          "mean_test_accuracy": 0.9985200000000001,
+          "mu": 3.0,
+          "payer_fraction_ci99_high": 0.0,
+          "payer_fraction_ci99_low": 0.0
+        },
+        {
+          "accuracy_ci99_high": 1.0000466622811093,
+          "accuracy_ci99_low": 0.999873337718891,
+          "mean_payer_fraction": 0.0,
+          "mean_shuffled_accuracy": 0.5009600000000001,
+          "mean_test_accuracy": 0.9999600000000001,
+          "mu": 4.0,
+          "payer_fraction_ci99_high": 0.0,
+          "payer_fraction_ci99_low": 0.0
+        },
+        {
+          "accuracy_ci99_high": 1.0,
+          "accuracy_ci99_low": 1.0,
+          "mean_payer_fraction": 0.0,
+          "mean_shuffled_accuracy": 0.49916,
+          "mean_test_accuracy": 1.0,
+          "mu": 5.0,
+          "payer_fraction_ci99_high": 0.0,
+          "payer_fraction_ci99_low": 0.0
+        },
+        {
+          "accuracy_ci99_high": 1.0,
+          "accuracy_ci99_low": 1.0,
+          "mean_payer_fraction": 0.0,
+          "mean_shuffled_accuracy": 0.5029600000000001,
+          "mean_test_accuracy": 1.0,
+          "mu": 6.0,
+          "payer_fraction_ci99_high": 0.0,
+          "payer_fraction_ci99_low": 0.0
+        }
+      ],
+      "shuffled_accuracy_spearman_ci99_high": 0.4730319545982627,
+      "shuffled_accuracy_spearman_ci99_low": -0.3207637945802057,
+      "shuffled_accuracy_spearman_mean": 0.07613408000902848
+    },
+    {
+      "accuracy_payment_spearman_ci99_high": -0.9284772482268258,
+      "accuracy_payment_spearman_ci99_low": -0.9847091502277758,
+      "accuracy_payment_spearman_mean": -0.9565931992273008,
+      "dimension": 32,
+      "passed": true,
+      "per_mu": [
+        {
+          "accuracy_ci99_high": 0.5068641871254513,
+          "accuracy_ci99_low": 0.49393581287454874,
+          "mean_payer_fraction": 0.09759999999999999,
+          "mean_shuffled_accuracy": 0.49512,
+          "mean_test_accuracy": 0.5004000000000001,
+          "mu": 0.0,
+          "payer_fraction_ci99_high": 0.11538161341701718,
+          "payer_fraction_ci99_low": 0.0798183865829828
+        },
+        {
+          "accuracy_ci99_high": 0.6750048624037144,
+          "accuracy_ci99_low": 0.6623551375962855,
+          "mean_payer_fraction": 0.03919999999999999,
+          "mean_shuffled_accuracy": 0.5018800000000001,
+          "mean_test_accuracy": 0.6686799999999999,
+          "mu": 0.5,
+          "payer_fraction_ci99_high": 0.04803785324935766,
+          "payer_fraction_ci99_low": 0.030362146750642326
+        },
+        {
+          "accuracy_ci99_high": 0.8381424894708586,
+          "accuracy_ci99_low": 0.8277375105291415,
+          "mean_payer_fraction": 0.015400000000000002,
+          "mean_shuffled_accuracy": 0.50186,
+          "mean_test_accuracy": 0.83294,
+          "mu": 1.0,
+          "payer_fraction_ci99_high": 0.020622256403993594,
+          "payer_fraction_ci99_low": 0.01017774359600641
+        },
+        {
+          "accuracy_ci99_high": 0.9349007993592062,
+          "accuracy_ci99_low": 0.9279792006407939,
+          "mean_payer_fraction": 0.0088,
+          "mean_shuffled_accuracy": 0.5024000000000001,
+          "mean_test_accuracy": 0.93144,
+          "mu": 1.5,
+          "payer_fraction_ci99_high": 0.012042605642666312,
+          "payer_fraction_ci99_low": 0.005557394357333689
+        },
+        {
+          "accuracy_ci99_high": 0.9781826872445568,
+          "accuracy_ci99_low": 0.974137312755443,
+          "mean_payer_fraction": 0.002,
+          "mean_shuffled_accuracy": 0.49872000000000005,
+          "mean_test_accuracy": 0.9761599999999999,
+          "mu": 2.0,
+          "payer_fraction_ci99_high": 0.004166557027728083,
+          "payer_fraction_ci99_low": -0.00016655702772808362
+        },
+        {
+          "accuracy_ci99_high": 0.9993053842171784,
+          "accuracy_ci99_low": 0.9981746157828215,
+          "mean_payer_fraction": 0.0004,
+          "mean_shuffled_accuracy": 0.50246,
+          "mean_test_accuracy": 0.99874,
+          "mu": 3.0,
+          "payer_fraction_ci99_high": 0.0012666228110912335,
+          "payer_fraction_ci99_low": -0.0004666228110912335
+        },
+        {
+          "accuracy_ci99_high": 1.000044996710832,
+          "accuracy_ci99_low": 0.9999150032891683,
+          "mean_payer_fraction": 0.0,
+          "mean_shuffled_accuracy": 0.5047400000000001,
+          "mean_test_accuracy": 0.9999800000000001,
+          "mu": 4.0,
+          "payer_fraction_ci99_high": 0.0,
+          "payer_fraction_ci99_low": 0.0
+        },
+        {
+          "accuracy_ci99_high": 1.0,
+          "accuracy_ci99_low": 1.0,
+          "mean_payer_fraction": 0.0,
+          "mean_shuffled_accuracy": 0.5002,
+          "mean_test_accuracy": 1.0,
+          "mu": 5.0,
+          "payer_fraction_ci99_high": 0.0,
+          "payer_fraction_ci99_low": 0.0
+        },
+        {
+          "accuracy_ci99_high": 1.0,
+          "accuracy_ci99_low": 1.0,
+          "mean_payer_fraction": 0.0,
+          "mean_shuffled_accuracy": 0.49932,
+          "mean_test_accuracy": 1.0,
+          "mu": 6.0,
+          "payer_fraction_ci99_high": 0.0,
+          "payer_fraction_ci99_low": 0.0
+        }
+      ],
+      "shuffled_accuracy_spearman_ci99_high": 0.2878373406159387,
+      "shuffled_accuracy_spearman_ci99_low": -0.307977846373081,
+      "shuffled_accuracy_spearman_mean": -0.010070252878571148
+    },
+    {
+      "accuracy_payment_spearman_ci99_high": -0.9680361781669083,
+      "accuracy_payment_spearman_ci99_low": -0.9935249941573557,
+      "accuracy_payment_spearman_mean": -0.980780586162132,
+      "dimension": 64,
+      "passed": true,
+      "per_mu": [
+        {
+          "accuracy_ci99_high": 0.5102548907118379,
+          "accuracy_ci99_low": 0.4979451092881621,
+          "mean_payer_fraction": 0.1502,
+          "mean_shuffled_accuracy": 0.5020999999999999,
+          "mean_test_accuracy": 0.5041,
+          "mu": 0.0,
+          "payer_fraction_ci99_high": 0.17074120019051545,
+          "payer_fraction_ci99_low": 0.12965879980948455
+        },
+        {
+          "accuracy_ci99_high": 0.6618672250439106,
+          "accuracy_ci99_low": 0.6485327749560894,
+          "mean_payer_fraction": 0.07880000000000001,
+          "mean_shuffled_accuracy": 0.50032,
+          "mean_test_accuracy": 0.6552,
+          "mu": 0.5,
+          "payer_fraction_ci99_high": 0.08815390767358636,
+          "payer_fraction_ci99_low": 0.06944609232641366
+        },
+        {
+          "accuracy_ci99_high": 0.8299064867449822,
+          "accuracy_ci99_low": 0.8201335132550177,
+          "mean_payer_fraction": 0.029200000000000004,
+          "mean_shuffled_accuracy": 0.5035399999999999,
+          "mean_test_accuracy": 0.82502,
+          "mu": 1.0,
+          "payer_fraction_ci99_high": 0.03425323592244859,
+          "payer_fraction_ci99_low": 0.024146764077551414
+        },
+        {
+          "accuracy_ci99_high": 0.9299693056726811,
+          "accuracy_ci99_low": 0.9215906943273188,
+          "mean_payer_fraction": 0.014600000000000002,
+          "mean_shuffled_accuracy": 0.49985999999999997,
+          "mean_test_accuracy": 0.9257799999999999,
+          "mu": 1.5,
+          "payer_fraction_ci99_high": 0.019449410940055888,
+          "payer_fraction_ci99_low": 0.009750589059944116
+        },
+        {
+          "accuracy_ci99_high": 0.9769356330136679,
+          "accuracy_ci99_low": 0.9727443669863322,
+          "mean_payer_fraction": 0.0062,
+          "mean_shuffled_accuracy": 0.4984,
+          "mean_test_accuracy": 0.97484,
+          "mu": 2.0,
+          "payer_fraction_ci99_high": 0.008461951943851541,
+          "payer_fraction_ci99_low": 0.0039380480561484596
+        },
+        {
+          "accuracy_ci99_high": 0.9988249410940058,
+          "accuracy_ci99_low": 0.9978550589059945,
+          "mean_payer_fraction": 0.0006000000000000001,
+          "mean_shuffled_accuracy": 0.49966,
+          "mean_test_accuracy": 0.9983400000000001,
+          "mu": 3.0,
+          "payer_fraction_ci99_high": 0.0015928411577002483,
+          "payer_fraction_ci99_low": -0.00039284115770024815
+        },
+        {
+          "accuracy_ci99_high": 1.0,
+          "accuracy_ci99_low": 1.0,
+          "mean_payer_fraction": 0.0,
+          "mean_shuffled_accuracy": 0.49535999999999997,
+          "mean_test_accuracy": 1.0,
+          "mu": 4.0,
+          "payer_fraction_ci99_high": 0.0,
+          "payer_fraction_ci99_low": 0.0
+        },
+        {
+          "accuracy_ci99_high": 1.0,
+          "accuracy_ci99_low": 1.0,
+          "mean_payer_fraction": 0.0,
+          "mean_shuffled_accuracy": 0.49820000000000003,
+          "mean_test_accuracy": 1.0,
+          "mu": 5.0,
+          "payer_fraction_ci99_high": 0.0,
+          "payer_fraction_ci99_low": 0.0
+        },
+        {
+          "accuracy_ci99_high": 1.0,
+          "accuracy_ci99_low": 1.0,
+          "mean_payer_fraction": 0.0,
+          "mean_shuffled_accuracy": 0.50116,
+          "mean_test_accuracy": 1.0,
+          "mu": 6.0,
+          "payer_fraction_ci99_high": 0.0,
+          "payer_fraction_ci99_low": 0.0
+        }
+      ],
+      "shuffled_accuracy_spearman_ci99_high": 0.47575332351797034,
+      "shuffled_accuracy_spearman_ci99_low": -0.04914311833274271,
+      "shuffled_accuracy_spearman_mean": 0.21330510259261382
+    }
+  ],
+  "m": 500,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "test_m": 5000
+}

@@ -1,0 +1,40 @@
+{
+  "claims": {
+    "1": {
+      "claim_id": 1,
+      "independent_comparisons": 206325,
+      "negative_control_witnesses": 12,
+      "passed": true,
+      "primary_antecedent_cases": 24543,
+      "verdict": "VERIFIED"
+    },
+    "2": {
+      "reason": "full expectation/scaling audit pending",
+      "verdict": "BLOCKED"
+    },
+    "3": {
+      "reason": "assumption-faithful k-NN scaling audit pending",
+      "verdict": "BLOCKED"
+    },
+    "4": {
+      "claim_id": 4,
+      "independent_checks": 441,
+      "negative_control_violations": 12,
+      "passed": true,
+      "threshold_value_cases": 182,
+      "verdict": "VERIFIED"
+    },
+    "5": {
+      "reason": "Figure 2 faithful sweep pending",
+      "verdict": "BLOCKED"
+    },
+    "6": {
+      "reason": "Folktables Figure 3 audit pending",
+      "verdict": "BLOCKED"
+    }
+  },
+  "fixed_command": "uv run --frozen python repro/src/verify_auctions.py",
+  "git_sha": "8c78c9e8a1e115e830f5b4082aa2821892df3a57",
+  "runtime_seconds": 0.26541820901911706,
+  "stage": "exact_theorem_contracts"
+}
