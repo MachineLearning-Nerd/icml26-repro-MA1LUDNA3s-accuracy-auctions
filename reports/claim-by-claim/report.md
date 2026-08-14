@@ -10,7 +10,7 @@ the six judged claims into an executable contract, ran every accepted check
 from one locked command, and required both an independent checker and a
 deliberately broken negative control.
 
-The outcome is deliberately asymmetric: Claims 1–5 are **VERIFIED**. Claim 6 is
+The outcome is deliberately asymmetric: Claims 1–5 are **VERIFIED_SCOPED**. Claim 6 is
 **BLOCKED**, not promoted from a near match. Three faithful 30,000-person
 implementations produced welfare gains of 19.52–19.91%, below the paper's
 reported “up to 23%”; a fourth, falsification-oriented route found that the
@@ -28,11 +28,11 @@ as the sample grows.
 
 | Claim | Paper evidence | Reproduction contract | Result |
 |---|---|---|---|
-| 1 | Theorem 1: weighted ERM allocation is bid-monotone | Exhaustively compare optimal allocation sets across every relevant bid interval, including ties | **VERIFIED** |
-| 2 | Theorem 2: regularized linear-classifier payments are \(O(1)\) in \(m\) | 64× sample-size sweep, 20 seeds, convergence and stability checks, reject a linear control | **VERIFIED** |
-| 3 | Theorem 3: noisy k-NN payments are \(\Omega(m)\) | 64× sweep, two \(k\) values, 20 seeds, one-sided 99% bounds, zero-noise control | **VERIFIED** |
-| 4 | Corollary 1: payment never exceeds value | Check payment, individual rationality, and dominant-strategy inequalities at every threshold | **VERIFIED** |
-| 5 | Figure 2: payer counts plateau; accuracy and payer proportion are negatively associated | Large-\(m\) plateau sweeps plus held-out classifier accuracy—not allocation rate | **VERIFIED** |
+| 1 | Theorem 1: weighted ERM allocation is bid-monotone | Exhaustively compare optimal allocation sets across every relevant bid interval, including ties | **VERIFIED_SCOPED** |
+| 2 | Theorem 2: regularized linear-classifier payments are \(O(1)\) in \(m\) | 64× sample-size sweep, 20 seeds, convergence and stability checks, reject a linear control | **VERIFIED_SCOPED** |
+| 3 | Theorem 3: noisy k-NN payments are \(\Omega(m)\) | 64× sweep, two \(k\) values, 20 seeds, one-sided 99% bounds, zero-noise control | **VERIFIED_SCOPED** |
+| 4 | Corollary 1: payment never exceeds value | Check payment, individual rationality, and dominant-strategy inequalities at every threshold | **VERIFIED_SCOPED** |
+| 5 | Figure 2: payer counts plateau; accuracy and payer proportion are negatively associated | Large-\(m\) plateau sweeps plus held-out classifier accuracy—not allocation rate | **VERIFIED_SCOPED** |
 | 6 | Figure 3: welfare improves by up to 23%, with a reported 21% relative accuracy loss | Three faithful implementations plus an assumption-complete falsification audit | **BLOCKED** |
 
 The source audit used the ar5iv HTML retrieved on 2026-07-23 with SHA-256
@@ -147,21 +147,23 @@ environment, command, evaluation, and limitations.
 The old judged Space revision
 `c55042270cb78121f72a1a0ce1fffe8ef25bbaaa` is preserved as immutable input.
 The candidate logbook is additive: the old path set is checked as a subset,
-and publication is limited to a SHA-256 allowlist of text files. No upload has
-occurred.
+and publication is limited to a SHA-256 allowlist of text files. The candidate
+was published to the existing Space at revision
+`1d9f5ffa9259a22f633cc426250fc3f190158186`; no external judge score increase
+is claimed.
 
 ## Assessment
 
 The reproduction replaces numerical toys with exact certificates for Claims 1
 and 4, 64× asymptotic studies for Claims 2 and 3, and genuine held-out accuracy
-for Claim 5. Those five claims are **VERIFIED** under explicit contracts.
+for Claim 5. Those five claims are **VERIFIED_SCOPED** under explicit contracts.
 Claim 6 is **BLOCKED** after three verification routes and a required fourth
 falsification route; calling the near match verified would overstate the
 evidence.
 
 Important lineage:
 
-- [`orx/exact-theorem-contracts`](https://github.com/MachineLearning-Nerd/icml26-repro-MA1LUDNA3s-accuracy-auctions/tree/orx/exact-theorem-contracts) — Claims 1 and 4 exact certificates.
-- [`orx/assumption-faithful-asymptotics`](https://github.com/MachineLearning-Nerd/icml26-repro-MA1LUDNA3s-accuracy-auctions/tree/orx/assumption-faithful-asymptotics) — Claims 2 and 3 scaling checks.
-- [`orx/faithful-figure-2-payments-and-accuracy`](https://github.com/MachineLearning-Nerd/icml26-repro-MA1LUDNA3s-accuracy-auctions/tree/orx/faithful-figure-2-payments-and-accuracy) — Claim 5.
-- [`orx/claim-6-falsification-and-quantifier-audit`](https://github.com/MachineLearning-Nerd/icml26-repro-MA1LUDNA3s-accuracy-auctions/tree/orx/claim-6-falsification-and-quantifier-audit) — all Claim 6 routes and the final quantifier audit.
+- [`audit/exact-theorem-contracts`](https://github.com/MachineLearning-Nerd/icml26-welfare-optimal-classification/tree/audit/exact-theorem-contracts) — Claims 1 and 4 exact certificates.
+- [`research/assumption-faithful-asymptotics`](https://github.com/MachineLearning-Nerd/icml26-welfare-optimal-classification/tree/research/assumption-faithful-asymptotics) — Claims 2 and 3 scaling checks.
+- [`research/figure-2-payments-accuracy`](https://github.com/MachineLearning-Nerd/icml26-welfare-optimal-classification/tree/research/figure-2-payments-accuracy) — Claim 5.
+- [`audit/claim-6-falsification`](https://github.com/MachineLearning-Nerd/icml26-welfare-optimal-classification/tree/audit/claim-6-falsification) — all Claim 6 routes and the final quantifier audit.

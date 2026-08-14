@@ -1,15 +1,70 @@
 {
-  "arxiv": "2606.02435",
+  "schema_version": 2,
+  "paper_identifier": "MA1LUDNA3s",
+  "paper_title": "Welfare-Optimal Classification with Accuracy Auctions",
+  "authors": [
+    "Bana Sadi",
+    "Eden Saig",
+    "Nir Rosenfeld"
+  ],
+  "venue": "ICML 2026",
+  "arxiv": "2606.02435v2",
+  "audited_source_sha256": "7671522004bedd62d9051e848cccf360d6fd4f17ecc681edfeb33990677c1f6a",
+  "recorded_release": {
+    "source": "release/candidate-validation.json",
+    "commit": "68373bc5788c0a592bfc4b87ac9dd5637d46cf73",
+    "duration_seconds": 773,
+    "expected_nonzero_exit_due_to_blocked_claim": true,
+    "published_space_revision": "1d9f5ffa9259a22f633cc426250fc3f190158186"
+  },
+  "evidence_release_gate": "PASSED",
+  "overall_status": "VERIFIED_SCOPED_WITH_BLOCKED_CLAIM",
+  "strict_paper_claim_gate": "NOT_READY",
+  "claims_verified": 5,
   "claims_blocked": 1,
   "claims_falsified": 0,
   "claims_total": 6,
-  "claims_verified": 5,
-  "live_judge_head": "c55042270cb78121f72a1a0ce1fffe8ef25bbaaa",
-  "live_judge_score": "5/12",
-  "paper": "MA1LUDNA3s",
-  "publication_gate_passed": true,
-  "publication_status": "awaiting_judge",
-  "published_space_revision": "1d9f5ffa9259a22f633cc426250fc3f190158186",
-  "score_increase_claimed": false,
-  "tests_passed": true
+  "claims": {
+    "C1": "VERIFIED_SCOPED_PROOF_AUDIT",
+    "C2": "VERIFIED_SCOPED_CONDITIONAL",
+    "C3": "VERIFIED_SCOPED_CONDITIONAL",
+    "C4": "VERIFIED_SCOPED_PROOF_AUDIT",
+    "C5": "VERIFIED_SCOPED_EMPIRICAL",
+    "C6": "BLOCKED_UNDER_SPECIFIED_PROTOCOL"
+  },
+  "publication": {
+    "status": "AWAITING_JUDGE",
+    "live_judge_head": "c55042270cb78121f72a1a0ce1fffe8ef25bbaaa",
+    "live_judge_score": "5/12",
+    "score_increase_claimed": false,
+    "published_space": "DineshAI/MA1LUDNA3s",
+    "published_space_revision": "1d9f5ffa9259a22f633cc426250fc3f190158186"
+  },
+  "repository": {
+    "owner": "MachineLearning-Nerd",
+    "original_name": "icml26-repro-MA1LUDNA3s-accuracy-auctions",
+    "target_name": "icml26-welfare-optimal-classification",
+    "default_branch": "main"
+  },
+  "branch_policy": {
+    "expected_public_branch_count": 10,
+    "final_branches": [
+      "main",
+      "baseline/frozen-judged-baseline",
+      "audit/exact-theorem-contracts",
+      "research/assumption-faithful-asymptotics",
+      "research/figure-2-payments-accuracy",
+      "research/claim-6-route-1",
+      "research/claim-6-route-2",
+      "research/claim-6-route-3",
+      "audit/claim-6-falsification",
+      "release/claim-by-claim-evidence"
+    ],
+    "legacy_refs_absent": [
+      "master",
+      "orx/*"
+    ],
+    "cleanup_status": "PENDING",
+    "remote_legacy_refs_absent": false
+  }
 }
