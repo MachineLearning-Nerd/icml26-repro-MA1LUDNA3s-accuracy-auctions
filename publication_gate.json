@@ -64,7 +64,8 @@
       "master",
       "orx/*"
     ],
-    "cleanup_status": "PENDING",
-    "remote_legacy_refs_absent": false
-  }
+    "cleanup_status": "VERIFIED",
+    "remote_legacy_refs_absent": true
+  },
+  "verified_at": "2026-08-14"
 }

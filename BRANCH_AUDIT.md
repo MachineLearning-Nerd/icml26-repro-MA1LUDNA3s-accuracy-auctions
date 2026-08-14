@@ -12,8 +12,8 @@ experiment branches:
 - `release/*` — cumulative evidence release
 
 All approved commits are attributed to `MachineLearning-Nerd`. The legacy
-`master` and `orx/*` names are historical provenance only and are scheduled for
-removal from the public remote during the migration.
+`master` and `orx/*` names are historical provenance only; they have been
+removed from the public remote.
 
 ## Mapping
 
@@ -44,3 +44,16 @@ Before publication, verify all of the following against the remote:
 - every reachable commit on the final branches has `MachineLearning-Nerd`
   author and committer identity;
 - README links and repository metadata use the target repository name.
+
+## Verified migration
+
+Verified on 2026-08-14 against
+`MachineLearning-Nerd/icml26-welfare-optimal-classification`:
+
+- the default branch is `main`;
+- the public branch set contains exactly the ten final branches in this file;
+- no `master` or `orx/*` ref remains;
+- all reachable commits on those final branches use
+  `MachineLearning-Nerd <MachineLearning-Nerd@users.noreply.github.com>`;
+- the repository description, homepage, README links, and gate metadata use the
+  target repository identity.
